@@ -27,6 +27,7 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 
 <![endif]-->
 <link rel="stylesheet" href="./chosen/chosen.min.css" />
+<link rel="stylesheet" href="./bootstrap-daterangepicker/daterangepicker-bs3.css" />
 <noscript><link rel="stylesheet" href="./css/noscript.min.css" /></noscript>
 </head>
 <body vocab="http://schema.org/" typeof="WebPage">
@@ -496,6 +497,10 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 	<input class="form-control" type="date" id="enddate" name="enddate" min="2015-05-27" max="2016-05-07">
 </div>
 <div class="form-group">
+	<label for="vacation-dates">When do you want to go on vacation?</label>
+	<input class="form-control rngpckr" type="text" id="vacation-dates">
+</div>
+<div class="form-group">
 	<label for="country2" class="required" aria-required="true"><span class="field-name">If you were to travel for the vacation, which country would you most like to visit?</span> <strong class="required" aria-required="true">(required)</strong> </label>
 	<br>
 	<select data-placeholder="Choose a Country..." class="chosen-select" id="country2" name="country2" style="width:350px;" tabindex="2">
@@ -911,6 +916,8 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 <![endif]-->
 <script src="./js/theme.min.js"></script>
 <script src="./chosen/chosen.jquery.js"></script>
+<script src="./bootstrap-daterangepicker/moment.min.js"></script>
+<script src="./bootstrap-daterangepicker/daterangepicker.js"></script>
 <script type="text/javascript">
 var config = {
 	'.chosen-select'           : {},
@@ -922,6 +929,13 @@ var config = {
 for (var selector in config) {
 	$(selector).chosen(config[selector]);
 }
+
+$(document).on( "ready.wb", function() {
+	var drpcls = "rngpckr",
+		inited_suffix = "-inited";
+
+	$( "." + drpcls ).not( drpcls + inited_suffix ).addClass( drpcls + inited_suffix ).daterangepicker();
+} );
 </script>
 </body>
 </html>
