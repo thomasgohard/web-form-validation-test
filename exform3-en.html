@@ -1,0 +1,563 @@
+<!DOCTYPE html><!--[if lt IE 9]><html class="no-js lt-ie9" lang="en" dir="ltr"><![endif]--><!--[if gt IE 8]><!-->
+<html class="no-js" lang="en" dir="ltr">
+<!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<!-- Web Experience Toolkit (WET) / Boîte à outils de l'expérience Web (BOEW)
+wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licence-fr.html -->
+<title>Form Usability Test</title>
+<meta content="width=device-width,initial-scale=1" name="viewport">
+<!-- Meta data -->
+<meta name="description" content="Provides generic validation and error message handling for Web forms.">
+<!-- Meta data-->
+<!--[if gte IE 9 | !IE ]><!-->
+<link href="./assets/favicon.ico" rel="icon" type="image/x-icon">
+<link rel="stylesheet" href="./css/wet-boew.min.css">
+<!--<![endif]-->
+<link rel="stylesheet" href="./css/theme.min.css">
+<style type="text/css">
+input[list]::-webkit-calendar-picker-indicator {
+	display: none;
+}
+</style>
+<!--[if lt IE 9]>
+<link href="./assets/favicon.ico" rel="shortcut icon" />
+
+<link rel="stylesheet" href="./css/ie8-wet-boew.min.css" />
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="./js/ie8-wet-boew.min.js"></script>
+<![endif]-->
+<!--[if lte IE 9]>
+
+
+<![endif]-->
+<noscript><link rel="stylesheet" href="./css/noscript.min.css" /></noscript>
+</head>
+<body vocab="http://schema.org/" typeof="WebPage">
+<ul id="wb-tphp">
+<li class="wb-slc">
+<a class="wb-sl" href="#wb-cont">Skip to main content</a>
+</li>
+<li class="wb-slc visible-sm visible-md visible-lg">
+<a class="wb-sl" href="#wb-info">Skip to "About this site"</a>
+</li>
+</ul>
+<header role="banner">
+<div id="wb-bnr" class="container">
+<section id="wb-lng" class="visible-md visible-lg text-right">
+<h2 class="wb-inv">Language selection</h2>
+<div class="row">
+<div class="col-md-12">
+<ul class="list-inline margin-bottom-none">
+<li><a lang="fr" href="exform3-fr.html">Français</a></li>
+</ul>
+</div>
+</div>
+</section>
+<div class="row">
+<div class="brand col-xs-8 col-sm-9 col-md-6">
+<a href="http://www.canada.ca/en/index.html"><object type="image/svg+xml" tabindex="-1" data="./assets/sig-blk-en.svg"></object><span class="wb-inv"> Government of Canada</span></a>
+</div>
+<section class="wb-mb-links col-xs-4 col-sm-3 visible-sm visible-xs" id="wb-glb-mn">
+<h2>Search and menus</h2>
+<ul class="list-inline text-right chvrn">
+<li><a href="#mb-pnl" title="Search and menus" aria-controls="mb-pnl" class="overlay-lnk" role="button"><span class="glyphicon glyphicon-search"><span class="glyphicon glyphicon-th-list"><span class="wb-inv">Search and menus</span></span></span></a></li>
+</ul>
+<div id="mb-pnl"></div>
+</section>
+<section id="wb-srch" class="col-xs-6 text-right visible-md visible-lg">
+<h2 class="wb-inv">Search</h2>
+<form action="#" method="post" name="cse-search-box" role="search" class="form-inline">
+<div class="form-group">
+<label for="wb-srch-q" class="wb-inv">Search website</label>
+<input id="wb-srch-q" list="wb-srch-q-ac" class="wb-srch-q form-control" name="q" type="search" value="" size="27" maxlength="150" placeholder="Search Canada.ca">
+<datalist id="wb-srch-q-ac">
+<!--[if lte IE 9]><select><![endif]-->
+<!--[if lte IE 9]></select><![endif]-->
+</datalist>
+</div>
+<div class="form-group submit">
+<button type="submit" id="wb-srch-sub" class="btn btn-primary btn-small" name="wb-srch-sub"><span class="glyphicon-search glyphicon"></span><span class="wb-inv">Search</span></button>
+</div>
+</form>
+</section>
+</div>
+</div>
+<nav role="navigation" id="wb-sm" class="wb-menu visible-md visible-lg" data-trgt="mb-pnl" data-ajax-fetch="./ajax/sitemenu-en.html" typeof="SiteNavigationElement">
+<h2 class="wb-inv">Topics menu</h2>
+<div class="container nvbar">
+<div class="row">
+<ul class="list-inline menu">
+<li><a href="http://www.esdc.gc.ca/en/jobs/index.page">Jobs</a></li>
+<li><a href="http://www.cic.gc.ca/english/index.asp">Immigration</a></li>
+<li><a href="http://travel.gc.ca/">Travel</a></li>
+<li><a href="http://www.canada.ca/en/services/business/index.html">Business</a></li>
+<li><a href="http://www.canada.ca/en/services/benefits/index.html">Benefits</a></li>
+<li><a href="http://healthycanadians.gc.ca/index-eng.php">Health</a></li>
+<li><a href="http://www.canada.ca/en/services/taxes/index.html">Taxes</a></li>
+<li><a href="http://www.canada.ca/en/services/index.html">More services</a></li>
+</ul>
+</div>
+</div>
+</nav>
+<nav role="navigation" id="wb-bc" class="" property="breadcrumb">
+<h2 class="wb-inv">You are here:</h2>
+<div class="container">
+<div class="row">
+<ol class="breadcrumb">
+<li><a href="http://www.canada.ca/en/index.html">Home</a></li>
+<li>Content page</li>
+</ol>
+</div>
+</div>
+</nav>
+</header>
+<main role="main" property="mainContentOfPage" class="container">
+<div class="wb-frmvld">
+<form action="./done-en.html" method="get" id="validation-example" novalidate>
+<fieldset>
+<section>
+<legend>Same Questions - Different Format</legend>
+</fieldset>
+<section>
+<div class="form-group">
+<label><span class="field-name">What is your date of birth?</span></label>
+<p> Remember to switch the month.</p>
+<ul class="list-inline">
+<li><label for="dob2yy"><span class="field-name">Year </span> (YYYY) </label>
+<input class="form-control" id="dob2yy" name="dob2yy" type="text" size=4 pattern="[0-9]{4}"></li>
+<li><label for="dob2mm"><span class="field-name">Month</span></label>
+<select class="form-control" id="dob2mm" name="dob2mm">
+<option label="Month"></option>
+<option value='01'>January</option>
+<option value='02'>February</option>
+<option value='03'>March</option>
+<option value='04'>April</option>
+<option value='05'>May</option>
+<option value='06'>June</option>
+<option value='07'>July</option>
+<option value='08'>August</option>
+<option value='09'>September</option>
+<option value='10'>October</option>
+<option value='11'>November</option>
+<option value='12'>December</option>
+</select></li>
+<li> <label for="dob2dd"><span class="field-name">Day</span></label>
+<select class="form-control" id="dob2dd" name="dob2dd">
+<option label="Day"></option>
+<option value='01'>01</option>
+<option value='02'>02</option>
+<option value='03'>03</option>
+<option value='04'>04</option>
+<option value='05'>05</option>
+<option value='06'>06</option>
+<option value='07'>07</option>
+<option value='08'>08</option>
+<option value='09'>09</option>
+<option value='10'>10</option>
+<option value='11'>11</option>
+<option value='12'>12</option>
+<option value='13'>13</option>
+<option value='14'>14</option>
+<option value='15'>15</option>
+<option value='16'>16</option>
+<option value='17'>17</option>
+<option value='18'>18</option>
+<option value='19'>19</option>
+<option value='20'>20</option>
+<option value='21'>21</option>
+<option value='22'>22</option>
+<option value='23'>23</option>
+<option value='24'>24</option>
+<option value='25'>25</option>
+<option value='26'>26</option>
+<option value='27'>27</option>
+<option value='28'>28</option>
+<option value='29'>29</option>
+<option value='30'>30</option>
+<option value='31'>31</option>
+</select></li>
+</ul>
+</div>
+<div class="form-group">
+<label><span class="field-name">When do you hope to take your next vacation?</span></label>
+<p>Enter the start and end dates for a period that you most hope to be on a trip, or a break. </p>
+<label for="startdate">Start Date<span class="datepicker-format"> (<abbr title="Four digits year, dash, two digits month, dash, two digits day">YYYY-MM-DD</abbr>)</span></label>
+<input class="form-control" type="date" id="startdate" name="startdate" min="2015-09-01" max="2016-12-30">
+<label for="enddate">End Date<span class="datepicker-format"> (<abbr title="Four digits year, dash, two digits month, dash, two digits day">YYYY-MM-DD</abbr>)</span></label>
+<input class="form-control" type="date" id="enddate" name="enddate" min="2015-09-01" max="2016-12-30">
+</div>
+<div class="form-group">
+<label><span class="field-name">If you were to travel for that vacation, which country would you most like to visit?</span></label>
+<p>Start typing the name of the country, then select from the list.  </p>
+<label for="country2" ><span class="field-name">
+Country</span></label>
+<input class="form-control" type="text" id="country2" name="country2" list="suggestions" placeholder = "Start typing..." />
+<datalist id="suggestions">
+<!--[if lte IE 9]><select><![endif]-->
+<option label="afghanistan" value="Afghanistan"</option>
+<option label="albania" value="Albania"</option>
+<option label="algeria" value="Algeria"</option>
+<option label="american-samoa" value="American Samoa"</option>
+<option label="andorra" value="Andorra"</option>
+<option label="angola" value="Angola"</option>
+<option label="anguilla" value="Anguilla"</option>
+<option label="antarctica" value="Antarctica"</option>
+<option label="antigua-and-barbuda" value="Antigua and Barbuda"</option>
+<option label="argentina" value="Argentina"</option>
+<option label="armenia" value="Armenia"</option>
+<option label="aruba" value="Aruba"</option>
+<option label="australia" value="Australia"</option>
+<option label="austria" value="Austria"</option>
+<option label="azerbaijan" value="Azerbaijan"></option>
+<option label="azores" value="Azores"></option>
+<option label="bahamas" value="Bahamas"></option>
+<option label="bahrain" value="Bahrain"></option>
+<option label="bangladesh" value="Bangladesh"></option>
+<option label="barbados" value="Barbados"></option>
+<option label="belarus" value="Belarus"></option>
+<option label="belgium" value="Belgium"></option>
+<option label="belize" value="Belize"></option>
+<option label="benin" value="Benin"></option>
+<option label="bermuda" value="Bermuda"></option>
+<option label="bhutan" value="Bhutan"></option>
+<option label="bolivia" value="Bolivia"></option>
+<option label="bonaire" value="Bonaire"></option>
+<option label="bosnia-and-herzegovina" value="Bosnia and Herzegovina"></option>
+<option label="botswana" value="Botswana"></option>
+<option label="brazil" value="Brazil"></option>
+<option label="british-virgin-islands" value="British Virgin Islands"></option>
+<option label="brunei-darussalam" value="Brunei Darussalam"></option>
+<option label="bulgaria" value="Bulgaria"></option>
+<option label="burkina-faso" value="Burkina Faso"></option>
+<option label="burma-myanmar" value="Burma (Myanmar)"></option>
+<option label="burundi" value="Burundi"></option>
+<option label="cabo-verde" value="Cabo Verde"></option>
+<option label="cambodia" value="Cambodia"></option>
+<option label="cameroon" value="Cameroon"></option>
+<option label="canada" value="Canada"></option>
+<option label="canary-islands" value="Canary Islands"></option>
+<option label="cayman-islands" value="Cayman Islands"></option>
+<option label="central-african-republic" value="Central African Republic"></option>
+<option label="chad" value="Chad"></option>
+<option label="chile" value="Chile"></option>
+<option label="china" value="China"></option>
+<option label="colombia" value="Colombia"></option>
+<option label="comoros" value="Comoros"></option>
+<option label="cook-islands" value="Cook Islands"></option>
+<option label="costa-rica" value="Costa Rica"></option>
+<option label="cote-d-ivoire-ivory-coast" value="C&#244;te d&#39;Ivoire (Ivory Coast)"></option>
+<option label="croatia" value="Croatia"></option>
+<option label="cuba" value="Cuba"></option>
+<option label="curacao" value="Cura&#231;ao"></option>
+<option label="cyprus" value="Cyprus"></option>
+<option label="czech-republic" value="Czech Republic"></option>
+<option label="congo-kinshasa" value="Democratic Republic of Congo (Kinshasa)"></option>
+<option label="denmark" value="Denmark"></option>
+<option label="djibouti" value="Djibouti"></option>
+<option label="dominica" value="Dominica"></option>
+<option label="dominican-republic" value="Dominican Republic"></option>
+<option label="ecuador" value="Ecuador"></option>
+<option label="egypt" value="Egypt"></option>
+<option label="el-salvador" value="El Salvador"></option>
+<option label="equatorial-guinea" value="Equatorial Guinea"></option>
+<option label="eritrea" value="Eritrea"></option>
+<option label="estonia" value="Estonia"></option>
+<option label="ethiopia" value="Ethiopia"></option>
+<option label="falkland-islands" value="Falkland Islands"></option>
+<option label="fiji" value="Fiji"></option>
+<option label="finland" value="Finland"></option>
+<option label="france" value="France"></option>
+<option label="french-guiana" value="French Guiana"></option>
+<option label="french-polynesia" value="French Polynesia"></option>
+<option label="gabon" value="Gabon"></option>
+<option label="gambia-the" value="Gambia, The"></option>
+<option label="georgia" value="Georgia"></option>
+<option label="germany" value="Germany"></option>
+<option label="ghana" value="Ghana"></option>
+<option label="gibraltar" value="Gibraltar"></option>
+<option label="greece" value="Greece"></option>
+<option label="greenland" value="Greenland"></option>
+<option label="grenada" value="Grenada"></option>
+<option label="guadeloupe" value="Guadeloupe"></option>
+<option label="guam" value="Guam"></option>
+<option label="guatemala" value="Guatemala"></option>
+<option label="guinea" value="Guinea"></option>
+<option label="guinea-bissau" value="Guinea-Bissau"></option>
+<option label="guyana" value="Guyana"></option>
+<option label="haiti" value="Haiti"></option>
+<option label="honduras" value="Honduras"></option>
+<option label="hong-kong" value="Hong Kong"></option>
+<option label="hungary" value="Hungary"></option>
+<option label="iceland" value="Iceland"></option>
+<option label="india" value="India"></option>
+<option label="indonesia" value="Indonesia"></option>
+<option label="iran" value="Iran"></option>
+<option label="iraq" value="Iraq"></option>
+<option label="ireland" value="Ireland"></option>
+<option label="israel-the-west-bank-and-the-gaza-strip" value="Israel, the West Bank and the Gaza Strip"></option>
+<option label="italy" value="Italy"></option>
+<option label="jamaica" value="Jamaica"></option>
+<option label="japan" value="Japan"></option>
+<option label="jordan" value="Jordan"></option>
+<option label="kazakhstan" value="Kazakhstan"></option>
+<option label="kenya" value="Kenya"></option>
+<option label="kiribati" value="Kiribati"></option>
+<option label="korea-north-dprk" value="Korea, North (DPRK)"></option>
+<option label="korea-south" value="Korea, South"></option>
+<option label="kosovo" value="Kosovo"></option>
+<option label="kuwait" value="Kuwait"></option>
+<option label="kyrgyz-republic" value="Kyrgyz Republic"></option>
+<option label="laos" value="Laos"></option>
+<option label="latvia" value="Latvia"></option>
+<option label="lebanon" value="Lebanon"></option>
+<option label="lesotho" value="Lesotho"></option>
+<option label="liberia" value="Liberia"></option>
+<option label="libya" value="Libya"></option>
+<option label="liechtenstein" value="Liechtenstein"></option>
+<option label="lithuania" value="Lithuania"></option>
+<option label="luxembourg" value="Luxembourg"></option>
+<option label="macao" value="Macao"></option>
+<option label="macedonia" value="Macedonia"></option>
+<option label="madagascar" value="Madagascar"></option>
+<option label="malawi" value="Malawi"></option>
+<option label="malaysia" value="Malaysia"></option>
+<option label="maldives" value="Maldives"></option>
+<option label="mali" value="Mali"></option>
+<option label="malta" value="Malta"></option>
+<option label="marshall-islands" value="Marshall Islands"></option>
+<option label="martinique" value="Martinique"></option>
+<option label="mauritania" value="Mauritania"></option>
+<option label="mauritius" value="Mauritius"></option>
+<option label="mayotte" value="Mayotte"></option>
+<option label="mexico" value="Mexico"></option>
+<option label="micronesia-fsm" value="Micronesia (FSM)"></option>
+<option label="moldova" value="Moldova"></option>
+<option label="monaco" value="Monaco"></option>
+<option label="mongolia" value="Mongolia"></option>
+<option label="montenegro" value="Montenegro"></option>
+<option label="montserrat" value="Montserrat"></option>
+<option label="morocco" value="Morocco"></option>
+<option label="mozambique" value="Mozambique"></option>
+<option label="namibia" value="Namibia"></option>
+<option label="nauru" value="Nauru"></option>
+<option label="nepal" value="Nepal"></option>
+<option label="netherlands" value="Netherlands"></option>
+<option label="new-caledonia" value="New Caledonia"></option>
+<option label="new-zealand" value="New Zealand"></option>
+<option label="nicaragua" value="Nicaragua"></option>
+<option label="niger" value="Niger"></option>
+<option label="nigeria" value="Nigeria"></option>
+<option label="niue" value="Niue"></option>
+<option label="northern-marianas" value="Northern Marianas"></option>
+<option label="norway" value="Norway"></option>
+<option label="oman" value="Oman"></option>
+<option label="pakistan" value="Pakistan"></option>
+<option label="palau" value="Palau"></option>
+<option label="panama" value="Panama"></option>
+<option label="papua-new-guinea" value="Papua New Guinea"></option>
+<option label="paraguay" value="Paraguay"></option>
+<option label="peru" value="Peru"></option>
+<option label="philippines" value="Philippines"></option>
+<option label="poland" value="Poland"></option>
+<option label="portugal" value="Portugal"></option>
+<option label="puerto-rico" value="Puerto Rico"></option>
+<option label="qatar" value="Qatar"></option>
+<option label="congo-brazzaville" value="Republic of Congo (Brazzaville)"></option>
+<option label="romania" value="Romania"></option>
+<option label="russia" value="Russia"></option>
+<option label="rwanda" value="Rwanda"></option>
+<option label="saint-barthelemy" value="Saint-Barth&#233;lemy"></option>
+<option label="saint-kitts-and-nevis" value="Saint Kitts and Nevis"></option>
+<option label="saint-lucia" value="Saint Lucia"></option>
+<option label="saint-martin" value="Saint Martin"></option>
+<option label="saint-pierre-et-miquelon" value="Saint-Pierre-et-Miquelon"></option>
+<option label="saint-vincent-the-grenadines" value="Saint Vincent &amp; the Grenadines"></option>
+<option label="samoa" value="Samoa"></option>
+<option label="san-marino" value="San Marino"></option>
+<option label="sao-tome-and-principe" value="S&#227;o Tom&#233; and Principe"></option>
+<option label="saudi-arabia" value="Saudi Arabia"></option>
+<option label="senegal" value="Senegal"></option>
+<option label="serbia" value="Serbia"></option>
+<option label="seychelles" value="Seychelles"></option>
+<option label="sierra-leone" value="Sierra Leone"></option>
+<option label="singapore" value="Singapore"></option>
+<option label="sint-maarten" value="Sint Maarten"></option>
+<option label="slovakia" value="Slovakia"></option>
+<option label="slovenia" value="Slovenia"></option>
+<option label="solomon-islands" value="Solomon Islands"></option>
+<option label="somalia" value="Somalia"></option>
+<option label="south-africa" value="South Africa"></option>
+<option label="south-sudan" value="South Sudan"></option>
+<option label="spain" value="Spain"></option>
+<option label="sri-lanka" value="Sri Lanka"></option>
+<option label="sudan" value="Sudan"></option>
+<option label="suriname" value="Suriname"></option>
+<option label="swaziland" value="Swaziland"></option>
+<option label="sweden" value="Sweden"></option>
+<option label="switzerland" value="Switzerland"></option>
+<option label="syria" value="Syria"></option>
+<option label="taiwan" value="Taiwan"></option>
+<option label="tajikistan" value="Tajikistan"></option>
+<option label="tanzania" value="Tanzania"></option>
+<option label="thailand" value="Thailand"></option>
+<option label="timor-leste-east-timor" value="Timor-Leste (East Timor)"></option>
+<option label="togo" value="Togo"></option>
+<option label="tokelau" value="Tokelau"></option>
+<option label="tonga" value="Tonga"></option>
+<option label="trinidad-and-tobago" value="Trinidad and Tobago"></option>
+<option label="tunisia" value="Tunisia"></option>
+<option label="turkey" value="Turkey"></option>
+<option label="turkmenistan" value="Turkmenistan"></option>
+<option label="turks-and-caicos-islands" value="Turks and Caicos Islands"></option>
+<option label="tuvalu" value="Tuvalu"></option>
+<option label="uganda" value="Uganda"></option>
+<option label="ukraine" value="Ukraine"></option>
+<option label="united-arab-emirates" value="United Arab Emirates"></option>
+<option label="united-kingdom" value="United Kingdom"></option>
+<option label="united-states" value="United States"></option>
+<option label="USA" value="United States"></option>
+<option label="uruguay" value="Uruguay"></option>
+<option label="uzbekistan" value="Uzbekistan"></option>
+<option label="vanuatu" value="Vanuatu"></option>
+<option label="venezuela" value="Venezuela"></option>
+<option label="vietnam" value="Vietnam"></option>
+<option label="virgin-islands-u-s" value="Virgin Islands (U.S.)"></option>
+<option label="yemen" value="Yemen"></option>
+<option label="zambia" value="Zambia"></option>
+<option label="zimbabwe" value="Zimbabwe"></option>
+</datalist>
+</div>
+</fieldset>
+<input type="submit" value="Submit" class="btn btn-primary">
+<input type="button" onclick="submitForm('./exform2-en.html')" value="Previous" class="cancel btn btn-default" >
+</form>
+
+<div class="arialive wb-inv" aria-live="polite" aria-relevant="all"></div></div>
+<p><noscript>&lt;p&gt;This form cannot be submitted without JavaScript. You may use one of the following methods:&lt;/p&gt; &lt;ul&gt; &lt;li&gt;Method 1&lt;/li&gt; &lt;li&gt;Method 2&lt;/li&gt; &lt;li&gt;Method n&lt;/li&gt; &lt;/ul&gt;</noscript>
+</p>
+<dl id="wb-dtmd">
+<dt>Date modified: </dt>
+<dd><p><time property="dateModified">2015-01-28</time></p></dd>
+</dl>
+</main>
+<aside class="gc-nttvs container">
+<h2>Government of Canada activities and initiatives</h2>
+<div id="gcwb_prts" class="wb-eqht row">
+<section class="col-lg-4 col-md-6 mrgn-bttm-md">
+<a rel="external" href="#">
+<h3 class="h5">[Activities and initiatives hyperlink text]</h3>
+<img class="img-responsive thumbnail mrgn-bttm-sm" src="./img/features/355x113.png" alt="">
+</a>
+<p>Brief description of the initiative, task or information being promoted.</p>
+</section>
+<section class="col-lg-4 col-md-6 mrgn-bttm-md">
+<a rel="external" href="#">
+<h3 class="h5">[Activities and initiatives hyperlink text]</h3>
+<img class="img-responsive thumbnail mrgn-bttm-sm" src="./img/features/355x113.png" alt="">
+</a>
+<p>Brief description of the initiative, task or information being promoted.</p>
+</section>
+<section class="col-lg-4 col-md-6 mrgn-bttm-md">
+<a rel="external" href="#">
+<h3 class="h5">[Activities and initiatives hyperlink text]</h3>
+<img class="img-responsive thumbnail mrgn-bttm-sm" src="./img/features/355x113.png" alt="">
+</a>
+<p>Brief description of the initiative, task or information being promoted.</p>
+</section>
+</div>
+</aside>
+<footer role="contentinfo" id="wb-info">
+<nav role="navigation" class="container visible-sm visible-md visible-lg wb-navcurr">
+<h2 class="wb-inv">About this site</h2>
+<div class="row">
+<div class="col-sm-3 col-lg-3">
+<section>
+<h3>Contact information</h3>
+<ul class="list-unstyled">
+<li><a href="#">Link 1</a></li>
+<li><a href="#">Link 2</a></li>
+<li><a href="#">Link 3</a></li>
+</ul>
+</section>
+<section>
+<h3>News</h3>
+<ul class="list-unstyled">
+<li><a href="http://news.gc.ca/web/index-en.do">Newsroom</a></li>
+<li><a href="http://news.gc.ca/web/nwsprdct-en.do?mthd=tp&amp;crtr.tp1D=1">News releases</a></li>
+<li><a href="http://news.gc.ca/web/nwsprdct-en.do?mthd=tp&amp;crtr.tp1D=3">Media advisories</a></li>
+<li><a href="http://news.gc.ca/web/nwsprdct-en.do?mthd=tp&amp;crtr.tp1D=970">Speeches</a></li>
+<li><a href="http://news.gc.ca/web/nwsprdct-en.do?mthd=tp&amp;crtr.tp1D=980">Statements</a></li>
+</ul>
+</section>
+</div>
+<section class="col-sm-3 col-lg-3">
+<h3>Government</h3>
+<ul class="list-unstyled">
+<li><a href="http://www.canada.ca/en/gov/system/index.html">How government works</a></li>
+<li><a href="http://www.canada.ca/en/gov/dept/index.html">Departments &amp; agencies</a></li>
+<li><a href="http://pm.gc.ca/eng">Prime Minister</a></li>
+<li><a href="http://www.canada.ca/en/gov/ministers/index.html">Ministers</a></li>
+<li><a href="http://www.canada.ca/en/gov/policy/index.html">Policies, regulations &amp; laws</a></li>
+<li><a href="http://www.canada.ca/en/gov/libraries/index.html">Libraries</a></li>
+<li><a href="http://www.canada.ca/en/gov/publications/index.html">Publications</a></li>
+<li><a href="http://www.canada.ca/en/gov/statistics/index.html">Statistics &amp; data</a></li>
+<li><a href="http://www.canada.ca/en/newsite.html">About Canada.ca</a></li>
+</ul>
+</section>
+<section class="col-sm-3 col-lg-3 brdr-lft">
+<h3>Transparency</h3>
+<ul class="list-unstyled">
+<li><a href="http://www.canada.ca/en/transparency/reporting.html">Government-wide reporting</a></li>
+<li><a href="http://open.canada.ca/en/">Open government</a></li>
+<li><a href="http://www.canada.ca/en/transparency/disclosure.html">Proactive disclosure</a></li>
+<li><a href="http://www.canada.ca/en/transparency/terms.html">Terms &amp; conditions</a></li>
+<li><a href="http://www.canada.ca/en/transparency/privacy.html">Privacy</a></li>
+</ul>
+</section>
+<div class="col-sm-3 col-lg-3 brdr-lft">
+<section>
+<h3>Feedback</h3>
+<p><a href="http://www.canada.ca/en/contact/feedback.html"><img src="./assets/feedback.png" alt="Feedback about this Web site"></a></p>
+</section>
+<section>
+<h3>Social media</h3>
+<p><a href="http://www.canada.ca/en/social/index.html"><img src="./assets/social.png" alt="Social media"></a></p>
+</section>
+<section>
+<h3>Mobile centre</h3>
+<p><a href="http://www.canada.ca/en/mobile/index.html"><img src="./assets/mobile.png" alt="Mobile centre"></a></p>
+</section>
+</div>
+</div>
+</nav>
+<div class="brand">
+<div class="container">
+<div class="row">
+<div class="col-xs-6 visible-sm visible-xs tofpg">
+<a href="#wb-cont">Top of Page <span class="glyphicon glyphicon-chevron-up"></span></a>
+</div>
+<div class="col-xs-6 col-md-12 text-right">
+<object type="image/svg+xml" tabindex="-1" role="img" data="./assets/wmms-blk.svg" aria-label="Symbol of the Government of Canada"></object>
+</div>
+</div>
+</div>
+</div>
+</footer>
+<!--[if gte IE 9 | !IE ]><!-->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="./js/wet-boew.min.js"></script>
+<!--<![endif]-->
+<!--[if lt IE 9]>
+<script src="./js/ie8-wet-boew2.min.js"></script>
+<![endif]-->
+<script src="./js/theme.min.js"></script>
+<script type="text/javascript">
+function submitForm(action)
+{
+	document.getElementById('validation-example').action = action;
+	document.getElementById('validation-example').submit();
+}
+</script>
+</body>
+</html>
