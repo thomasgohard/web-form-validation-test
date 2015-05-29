@@ -443,15 +443,6 @@ input[list]::-webkit-calendar-picker-indicator {
 					<!--[if lte IE 9]></select><![endif]-->
 				</datalist>
 			</fieldset>
-			<fieldset>
-				<legend>Choose a password</legend>
-				<div class="form-group">
-					<label for="password1"><span class="field-name">Password</span> (between 5 and 10 characters) </label>
-					<input type="password" data-rule-rangelength="[5,10]" size="10" maxlength="10" name="password1" id="password1" class="form-control">
-					<label for="passwordconfirm"><span class="field-name">Confirm your password</span> </label>
-					<input type="password" data-rule-equalto="#password1" size="10" maxlength="10" name="passwordconfirm" id="passwordconfirm" class="form-control">
-				</div>
-			</fieldset>
 			<input type="button" onclick="submitForm('./exform2-en.html')" value="Previous" class="cancel btn btn-default" >
 			<input type="submit" value="Submit" class="btn btn-primary">
 		</form>
