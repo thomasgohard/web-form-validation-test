@@ -11,9 +11,10 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 <meta name="description" content="La Boîte à outils de l’expérience Web (BOEW) rassemble différents composants réutilisables et prêts-à-utiliser pour la conception et la mise à jour de sites Web innovateurs qui sont à la fois accessibles, conviviaux et interopérables. Tous ces composants réutilisables sont des logiciels libres mis à la disposition des ministères et des collectivités Web externes.">
 <!-- Meta data-->
 <!--[if gte IE 9 | !IE ]><!-->
-<link href="./lib/GCWeb//assets/favicon.ico" rel="icon" type="image/x-icon">
-<link rel="stylesheet" href="./lib/GCWeb//css/theme.min.css">
+<link href="./assets/favicon.ico" rel="icon" type="image/x-icon">
+<link rel="stylesheet" href="./css/wet-boew.min.css">
 <!--<![endif]-->
+<link rel="stylesheet" href="./css/theme.min.css">
 <style type="text/css">
 input[list]::-webkit-calendar-picker-indicator {
 	display: none;
@@ -32,17 +33,17 @@ input[list]::-webkit-calendar-picker-indicator {
 }
 </style>
 <!--[if lt IE 9]>
-<link href="./lib/GCWeb//assets/favicon.ico" rel="shortcut icon" />
+<link href="./assets/favicon.ico" rel="shortcut icon" />
 
-<link rel="stylesheet" href="./lib/GCWeb//css/ie8-theme.min.css" />
+<link rel="stylesheet" href="./css/ie8-wet-boew.min.css" />
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-<script src="./lib/wet-boew/js/ie8-wet-boew.min.js"></script>
+<script src="./js/ie8-wet-boew.min.js"></script>
 <![endif]-->
 <!--[if lte IE 9]>
 
 
 <![endif]-->
-<noscript><link rel="stylesheet" href="./lib/wet-boew/css/noscript.min.css" /></noscript>
+<noscript><link rel="stylesheet" href="./css/noscript.min.css" /></noscript>
 </head>
 <body vocab="http://schema.org/" typeof="WebPage">
 <ul id="wb-tphp">
@@ -67,7 +68,7 @@ input[list]::-webkit-calendar-picker-indicator {
 </section>
 <div class="row">
 <div class="brand col-xs-8 col-sm-9 col-md-6">
-<a href="http://www.canada.ca/fr/index.html"><object type="image/svg+xml" tabindex="-1" data="./lib/GCWeb//assets/sig-blk-fr.svg"></object><span class="wb-inv"> Gouvernement du Canada</span></a>
+<a href="http://www.canada.ca/fr/index.html"><object type="image/svg+xml" tabindex="-1" data="./assets/sig-blk-fr.svg"></object><span class="wb-inv"> Gouvernement du Canada</span></a>
 </div>
 <section class="wb-mb-links col-xs-4 col-sm-3 visible-sm visible-xs" id="wb-glb-mn">
 <h2>Recherche et menus</h2>
@@ -94,14 +95,14 @@ input[list]::-webkit-calendar-picker-indicator {
 </section>
 </div>
 </div>
-<nav role="navigation" id="wb-sm" class="wb-menu visible-md visible-lg" data-trgt="mb-pnl" data-ajax-replace="./ajax/sitemenu-fr.html" typeof="SiteNavigationElement">
+<nav role="navigation" id="wb-sm" class="wb-menu visible-md visible-lg" data-trgt="mb-pnl" data-ajax-fetch="./ajax/sitemenu-fr.html" typeof="SiteNavigationElement">
 <h2 class="wb-inv">Menu des sujets</h2>
 <div class="container nvbar">
 <div class="row">
 <ul class="list-inline menu">
 <li><a href="http://www.edsc.gc.ca/fr/emplois/index.page">Emplois</a></li>
 <li><a href="http://www.cic.gc.ca/francais/index.asp">Immigration</a></li>
-<li><a href="http://voyage.gc.ca">Voyage</a></li>
+<li><a href="http://voyage.gc.ca/">Voyage</a></li>
 <li><a href="http://www.canada.ca/fr/services/entreprises/index.html">Entreprises</a></li>
 <li><a href="http://www.canada.ca/fr/services/prestations/index.html">Prestations</a></li>
 <li><a href="http://canadiensensante.gc.ca/index-fra.php">Santé</a></li>
@@ -447,13 +448,34 @@ input[list]::-webkit-calendar-picker-indicator {
 	</div>
 	<dl id="wb-dtmd">
 		<dt>Date de modification&#160;:&#32;</dt>
-		<dd><time property="dateModified">2015-01-28</time></dd>
+		<dd><p><time property="dateModified">2015-01-28</time></p></dd>
 	</dl>
 </main>
 <aside class="gc-nttvs container">
 <h2>Activités et initiatives du gouvernement du Canada</h2>
-<p class="subtitle">Voici quelques-unes des activités et initiatives que mènent présentement les ministères et les organismes du gouvernement du Canada.</p>
-<div class="row"><section class="col-lg-4 col-md-6 mrgn-bttm-md"><a href="http://www.budget.gc.ca/2015/prebudget-prebudgetaire/01/index-fra.html?utm_source=CanCa&amp;utm_medium=initiative&amp;utm_content=Dan&amp;utm_campaign=PostBud15#6" class="gl-departments"><h4 class="h5">Découvrez Mes avantages</h4><img class="img-responsive thumbnail mrgn-bttm-sm" alt="" src="./img/features/20150713-1.jpg"></a><p>Renseignez-vous sur la façon dont les allègements fiscaux du gouvernement peuvent aider votre famille.</p></section><section class="col-lg-4 col-md-6 mrgn-bttm-md"><a href="http://canada.pch.gc.ca/fra/1342792785740/1342793251811" class="gl-departments"><h4 class="h5">Canada 150</h4><img class="img-responsive thumbnail mrgn-bttm-sm" alt="" src="./img/features/20150713-2-fr.jpg"></a><p>Que vous fassiez partie d’un organisme, d’une collectivité ou d’une entreprise, ou que vous soyez un particulier, il existe d’innombrables façons de célébrer le 150<sup>e</sup> anniversaire de la Confédération en 2017.</p></section><section class="col-lg-4 col-md-6 mrgn-bttm-md"><a href="http://canada.pch.gc.ca/fra/1431092517027/1431092584039" class="gl-departments"><h4 class="h5">Lumières du Nord</h4><img class="img-responsive thumbnail mrgn-bttm-sm" alt="" src="./img/features/20150713-3-fr.jpg"></a><p>Laissez-vous transporter par la magie du tout nouveau spectacle son et lumière sur la Colline du Parlement. Une présentation bilingue et gratuite, tous les soirs, du 10 juillet au 12 septembre 2015.</p></section></div>
+<div id="gcwb_prts" class="wb-eqht row">
+<section class="col-lg-4 col-md-6 mrgn-bttm-md">
+<a rel="external" href="#">
+<h3 class="h5">[Texte de l’hyperlien d’activités et initiatives]</h3>
+<img class="img-responsive thumbnail mrgn-bttm-sm" src="./img/features/355x113.png" alt="">
+</a>
+<p>Brève description de l’initiative, la tâche ou des renseignements en promotion.</p>
+</section>
+<section class="col-lg-4 col-md-6 mrgn-bttm-md">
+<a rel="external" href="#">
+<h3 class="h5">[Texte de l’hyperlien d’activités et initiatives]</h3>
+<img class="img-responsive thumbnail mrgn-bttm-sm" src="./img/features/355x113.png" alt="">
+</a>
+<p>Brève description de l’initiative, la tâche ou des renseignements en promotion.</p>
+</section>
+<section class="col-lg-4 col-md-6 mrgn-bttm-md">
+<a rel="external" href="#">
+<h3 class="h5">[Texte de l’hyperlien d’activités et initiatives]</h3>
+<img class="img-responsive thumbnail mrgn-bttm-sm" src="./img/features/355x113.png" alt="">
+</a>
+<p>Brève description de l’initiative, la tâche ou des renseignements en promotion.</p>
+</section>
+</div>
 </aside>
 <footer role="contentinfo" id="wb-info">
 <nav role="navigation" class="container visible-sm visible-md visible-lg wb-navcurr">
@@ -482,15 +504,14 @@ input[list]::-webkit-calendar-picker-indicator {
 <section class="col-sm-3 col-lg-3">
 <h3>Gouvernement</h3>
 <ul class="list-unstyled">
-<li><a href="http://www.canada.ca/fr/gouv/systeme">Comment le gouvernement fonctionne</a></li>
-<li><a href="http://www.canada.ca/fr/gouv/min">Ministères et organismes</a></li>
+<li><a href="http://www.canada.ca/fr/gouv/systeme/index.html">Comment le gouvernement fonctionne</a></li>
+<li><a href="http://www.canada.ca/fr/gouv/min/index.html">Ministères et organismes</a></li>
 <li><a href="http://pm.gc.ca/fra">Premier ministre</a></li>
-<li><a href="http://www.canada.ca/fr/gouv/ministres">Ministres</a></li>
-<li><a href="http://www.canada.ca/fr/gouv/fonctionpublique">Fonction publique et force militaire</a></li>
-<li><a href="http://www.canada.ca/fr/gouv/politique">Politiques, règlements et lois</a></li>
-<li><a href="http://www.canada.ca/fr/gouv/bibliotheques">Bibliothèques</a></li>
-<li><a href="http://www.canada.ca/fr/gouv/publications">Publications</a></li>
-<li><a href="http://www.canada.ca/fr/gouv/statistiques">Statistiques et données</a></li>
+<li><a href="http://www.canada.ca/fr/gouv/ministres/index.html">Ministres</a></li>
+<li><a href="http://www.canada.ca/fr/gouv/politique/index.html">Politiques, règlements et lois</a></li>
+<li><a href="http://www.canada.ca/fr/gouv/bibliotheques/index.html">Bibliothèques</a></li>
+<li><a href="http://www.canada.ca/fr/gouv/publications/index.html">Publications</a></li>
+<li><a href="http://www.canada.ca/fr/gouv/statistiques/index.html">Statistiques et données</a></li>
 <li><a href="http://www.canada.ca/fr/nouveausite.html">À propos de Canada.ca</a></li>
 </ul>
 </section>
@@ -498,7 +519,7 @@ input[list]::-webkit-calendar-picker-indicator {
 <h3>Transparence</h3>
 <ul class="list-unstyled">
 <li><a href="http://www.canada.ca/fr/transparence/rapports.html">Établissement de rapports à l’échelle du gouvernement</a></li>
-<li><a href="http://ouvert.canada.ca/fr">Gouvernement ouvert</a></li>
+<li><a href="http://ouvert.canada.ca/fr/">Gouvernement ouvert</a></li>
 <li><a href="http://www.canada.ca/fr/transparence/divulgation.html">Divulgation proactive</a></li>
 <li><a href="http://www.canada.ca/fr/transparence/avis.html">Avis</a></li>
 <li><a href="http://www.canada.ca/fr/transparence/confidentialite.html">Confidentialité</a></li>
@@ -507,15 +528,15 @@ input[list]::-webkit-calendar-picker-indicator {
 <div class="col-sm-3 col-lg-3 brdr-lft">
 <section>
 <h3>Rétroaction</h3>
-<p><a href="http://www.canada.ca/fr/contact/retroaction.html"><img src="./lib/GCWeb//assets/feedback.png" alt="Rétroaction sur ce site Web"></a></p>
+<p><a href="http://www.canada.ca/fr/contact/retroaction.html"><img src="./assets/feedback.png" alt="Rétroaction sur ce site Web"></a></p>
 </section>
 <section>
 <h3>Médias sociaux</h3>
-<p><a href="http://www.canada.ca/fr/sociaux"><img src="./lib/GCWeb//assets/social.png" alt="Médias sociaux"></a></p>
+<p><a href="http://www.canada.ca/fr/sociaux/index.html"><img src="./assets/social.png" alt="Médias sociaux"></a></p>
 </section>
 <section>
 <h3>Centre mobile</h3>
-<p><a href="http://www.canada.ca/fr/mobile"><img src="./lib/GCWeb//assets/mobile.png" alt="Centre mobile"></a></p>
+<p><a href="http://www.canada.ca/fr/mobile/index.html"><img src="./assets/mobile.png" alt="Centre mobile"></a></p>
 </section>
 </div>
 </div>
@@ -527,20 +548,20 @@ input[list]::-webkit-calendar-picker-indicator {
 <a href="#wb-cont">Haut de la page <span class="glyphicon glyphicon-chevron-up"></span></a>
 </div>
 <div class="col-xs-6 col-md-12 text-right">
-<object type="image/svg+xml" tabindex="-1" role="img" data="./lib/GCWeb//assets/wmms-blk.svg" aria-label="Symbole du gouvernement du Canada"></object>
+<object type="image/svg+xml" tabindex="-1" role="img" data="./assets/wmms-blk.svg" aria-label="Symbole du gouvernement du Canada"></object>
 </div>
 </div>
 </div>
 </div>
 </footer>
 <!--[if gte IE 9 | !IE ]><!-->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-<script src="./lib/wet-boew/js/wet-boew.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="./js/wet-boew.min.js"></script>
 <!--<![endif]-->
 <!--[if lt IE 9]>
-<script src="./lib/wet-boew/js/ie8-wet-boew2.min.js"></script>
-
+<script src="./js/ie8-wet-boew2.min.js"></script>
 <![endif]-->
+<script src="./js/theme.min.js"></script>
 <script type="text/javascript">
 function submitForm(action)
 {
