@@ -113,6 +113,11 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 		<form action="./exform3-en.html" method="get" id="validation-example" novalidate>
 			<fieldset>
 				<legend>About you</legend>
+				<div class="form-group">
+					<label for="tel1" ><span class="field-name">Daytime Contact Number</span></label>
+					<p id="tel1-desc">Use your real number, but switch a few digits to protect your privacy.</p>
+					<input class="form-control" id="tel1" name="tel1" type="tel" data-rule-phoneus="true" aria-describedby="tel1-desc">
+				</div>
 			<div class="form-group">
 				<label for="bdate1"><span class="field-name">When were you born?</span> <span class="datepicker-format">(YYYY-MM-DD)</span></label>
 				<p id="bdate-desc">Use your real date of birth - just switch the month to one month higher or lower than your own.</p>
