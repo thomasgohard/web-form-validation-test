@@ -129,8 +129,8 @@ input[list]::-webkit-calendar-picker-indicator {
 	<div class="wb-frmvld">
 		<form action="./done-fr.html" method="get" id="validation-example" novalidate>
 			<fieldset class="form-group">
-				<legend>Quelle est votre date de naissance?</legend>
-				<p id="dob-desc">N'oubliez pas de changer le mois.</p>
+				<legend>Votre date de naissance à nouveau</legend>
+				<p id="dob-desc">Différents formats -n'oubliez pas de changer le mois.</p>
 				<div class="form-inline dob-picker">
 					<div class="form-group">
 						<label for="dob2yy"><span class="field-name">Année</span> (AAAA)</label>
@@ -193,14 +193,21 @@ input[list]::-webkit-calendar-picker-indicator {
 					</div>
 				</div>
 			</fieldset>
-			<fieldset class="form-group">
-				<legend>Quand espérez-vous prendre vos prochaines vacances?</legend>
-				<p id="vacation-desc">Indiquez les dates de départ et de retour pour une période pendant laquelle vous espérez être en vacances ou en congé.</p>
-				<label for="startdate">Date de départ<span class="datepicker-format"> (<abbr title="Année à quatre chiffre, tiret, mois à deux chiffres, tiret, jour à deux chiffres">AAAA-MM-JJ</abbr>)</span></label>
-				<input class="form-control" type="date" id="startdate" name="startdate">
-				<label for="enddate">Date de retour<span class="datepicker-format"> (<abbr title="Année à quatre chiffre, tiret, mois à deux chiffres, tiret, jour à deux chiffres">AAAA-MM-JJ</abbr>)</span></label>
-				<input class="form-control" type="date" id="enddate" name="enddate">
-			</fieldset>
+			<fieldset>
+			<legend class="required"><span class="field-name">Statut de citoyen</span> <strong class="required">(obligatoire)</strong></legend>
+			<div class="radio">
+				<label for="status1" class="required"><input type="radio" name="status" value="1" id="status1" required="required" />  Citoyen canadien</label>
+			</div>
+			<div class="radio">
+				<label for="status2"><input type="radio" name="status" value="2" id="status2" />  Résident permanent</label>
+			</div>
+			<div class="radio">
+				<label for="status3"><input type="radio" name="status" value="3" id="status3" />  Permis de travail</label>
+			</div>
+			<div class="radio">
+				<label for="status4"><input type="radio" name="status" value="4" id="status4" />  Autre</label>
+			</div>
+		</fieldset>
 			<fieldset class="form-group">
 				<legend>Si vous vous déplaceriez pour ces vacances, quel pays aimeriez-vous le plus visiter?</legend>
 				<p id="country-desc">Commencez à taper le nom du pays, puis sélectionnez dans la liste.</p>
