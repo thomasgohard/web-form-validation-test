@@ -372,6 +372,10 @@ input[list]::-webkit-calendar-picker-indicator {
 			<fieldset class="form-group">
 				<label for="frmAddressS" ><span class="field-name">Address</span></label>
 				<input class="form-control" required id="frmAddressS" name="ship-address" placeholder="123, Any Street" autocomplete="shipping street-address"/>
+				<div class="form-group">
+					<label for="fname1" class="required"><span class="field-name">First name</span> <strong class="required">(required)</strong></label>
+					<input class="form-control" id="fname1" name="fname1" type="text" required="required" pattern=".{2,}" data-rule-minlength="2" />
+				</div>
 			</fieldset>
 			<fieldset class="form-group">
 				<label for="frmCityS" ><span class="field-name">City</span></label>
