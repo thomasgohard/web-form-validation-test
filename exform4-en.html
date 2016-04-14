@@ -129,7 +129,7 @@ input[list]::-webkit-calendar-picker-indicator {
 	<div class="wb-frmvld">
 		<form action="./done-en.html" method="get" id="validation-example" novalidate>
 			<fieldset class="form-group">
-				<legend>If you were to travel for that vacation, which country would you most like to visit?</legend>
+				<legend>What is your address?</legend>
 				<p id="country-desc">Start typing the name of the country, then select from the list.</p>
 				<label for="country2" ><span class="field-name">Country</span></label>
 				<input class="form-control" type="text" id="country2" name="country2" list="suggestions" placeholder="Start typing..." />
@@ -368,6 +368,11 @@ input[list]::-webkit-calendar-picker-indicator {
 					<option value="zimbabwe">Zimbabwe</option>
 					<!--[if lte IE 9]></select><![endif]-->
 				</datalist>
+			</fieldset>
+			<fieldset class="form-group">
+				<label for="frmAddressS">Address</label>
+				<input name="ship-address" required id="frmAddressS" placeholder="123 Any Street" autocomplete="shipping street-address">
+				<input class="form-control" required id="frmAddressS" name="ship-address" placeholder="123 Any Street" autocomplete="shipping street-address"/>
 			</fieldset>
 			<input type="button" onclick="submitForm('./exform2-en.html')" value="Previous" class="cancel btn btn-default" >
 			<input type="submit" value="Submit" class="btn btn-primary">
