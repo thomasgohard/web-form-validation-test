@@ -370,8 +370,12 @@ input[list]::-webkit-calendar-picker-indicator {
 				</datalist>
 			</fieldset>
 			<fieldset class="form-group">
-				<label for="frmAddressS">Address</label>
+				<label for="frmAddressS" ><span class="field-name">Address</span></label>
 				<input class="form-control" required id="frmAddressS" name="ship-address" placeholder="123 Any Street" autocomplete="shipping street-address"/>
+			</fieldset>
+			<fieldset class="form-group">
+				<label for="frmCityS" ><span class="field-name">City</span></label>
+				<input class="form-control" required id="frmCityS" name="ship-city" placeholder="New York" autocomplete="shipping locality"/>
 			</fieldset>
 			<input type="button" onclick="submitForm('./exform2-en.html')" value="Previous" class="cancel btn btn-default" >
 			<input type="submit" value="Submit" class="btn btn-primary">
