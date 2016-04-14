@@ -378,8 +378,16 @@ input[list]::-webkit-calendar-picker-indicator {
 					<label for="pcodeca1" class="required"><span class="field-name">Postal code</span> <strong class="required">(required)</strong></label>
 					<input class="form-control" id="pcodeca1" name="pcodeca1" type="text" size="7" maxlength="7" required="required" data-rule-postalCodeCA="true" />
 				</div>
-
+				<div class="form-group">
+					<label for="frmCityS" ><span class="field-name">City</span></label>
+					<input class="form-control" required id="frmCityS" name="ship-city" placeholder="Ottawa" autocomplete="shipping locality"/>
+				</div>
+				<div class="form-group">
+					<label for="frmStateS" ><span class="field-name">Province</span></label>
+					<input class="form-control" required id="frmStateS" name="ship-state" placeholder="Ontario" autocomplete="shipping region"/>
+				</div>
 			</fieldset>
+			<!--
 			<fieldset class="form-group">
 				<label for="frmCityS" ><span class="field-name">City</span></label>
 				<input class="form-control" required id="frmCityS" name="ship-city" placeholder="Ottawa" autocomplete="shipping locality"/>
@@ -388,6 +396,7 @@ input[list]::-webkit-calendar-picker-indicator {
 				<label for="frmStateS" ><span class="field-name">Province</span></label>
 				<input class="form-control" required id="frmStateS" name="ship-state" placeholder="Ontario" autocomplete="shipping region"/>
 			</fieldset>
+			-->
 			<input type="button" onclick="submitForm('./exform2-en.html')" value="Previous" class="cancel btn btn-default" >
 			<input type="submit" value="Submit" class="btn btn-primary">
 		</form>
