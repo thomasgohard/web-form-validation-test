@@ -128,86 +128,43 @@ input[list]::-webkit-calendar-picker-indicator {
 	<p>Ce formulaire n'est pas connecté à un serveur - les données ne sont pas enregistrées.</p>
 	<div class="wb-frmvld">
 		<form action="./done-fr.html" method="get" id="validation-example" novalidate>
-			<fieldset class="form-group">
-				<legend>Votre date de naissance à nouveau</legend>
-				<p id="dob-desc">Différents formats -n'oubliez pas de changer le mois.</p>
-				<div class="form-inline dob-picker">
-					<div class="form-group">
-						<label for="dob2yy"><span class="field-name">Année</span> (AAAA)</label>
-						<input class="form-control" id="dob2yy" name="dob2yy" type="text" size=4 pattern="[0-9]{4}">
-					</div>
-					<div class="form-group">
-						<label for="dob2mm"><span class="field-name">Mois</span></label>
-						<select class="form-control" id="dob2mm" name="dob2mm" aria-describedby="dob-desc">
-							<option label="mois"></option>
-							<option value='01'>janvier</option>
-							<option value='02'>février</option>
-							<option value='03'>mars</option>
-							<option value='04'>avril</option>
-							<option value='05'>mai</option>
-							<option value='06'>juin</option>
-							<option value='07'>juillet</option>
-							<option value='08'>août</option>
-							<option value='09'>septembre</option>
-							<option value='10'>octobre</option>
-							<option value='11'>novembre</option>
-							<option value='12'>décembre</option>
-						</select>
-					</div>
-					<div class="form-group">
-						<label for="dob2dd"><span class="field-name">Jour</span></label>
-						<select class="form-control" id="dob2dd" name="dob2dd">
-							<option label="Jour"></option>
-							<option value='01'>01</option>
-							<option value='02'>02</option>
-							<option value='03'>03</option>
-							<option value='04'>04</option>
-							<option value='05'>05</option>
-							<option value='06'>06</option>
-							<option value='07'>07</option>
-							<option value='08'>08</option>
-							<option value='09'>09</option>
-							<option value='10'>10</option>
-							<option value='11'>11</option>
-							<option value='12'>12</option>
-							<option value='13'>13</option>
-							<option value='14'>14</option>
-							<option value='15'>15</option>
-							<option value='16'>16</option>
-							<option value='17'>17</option>
-							<option value='18'>18</option>
-							<option value='19'>19</option>
-							<option value='20'>20</option>
-							<option value='21'>21</option>
-							<option value='22'>22</option>
-							<option value='23'>23</option>
-							<option value='24'>24</option>
-							<option value='25'>25</option>
-							<option value='26'>26</option>
-							<option value='27'>27</option>
-							<option value='28'>28</option>
-							<option value='29'>29</option>
-							<option value='30'>30</option>
-							<option value='31'>31</option>
-						</select>
-					</div>
+			<fieldset>
+				<div class="form-group">
+					<label for="frmAddressS" ><span class="field-name">Address</span></label>
+					<input class="form-control" id="frmAddressS" name="ship-address" placeholder="123, Any Street" autocomplete="shipping street-address"/>
+				</div>
+				<div class="form-group">
+					<label for="frmCityS" ><span class="field-name">City</span></label>
+					<input class="form-control" id="frmCityS" name="ship-city" placeholder="Ottawa" autocomplete="shipping locality"/>
+				</div>
+				<div class="form-group">
+					<label for="frmProvince"><span class="field-name">Province</span></label>
+					<select class="form-control" id="frmProvince" name="frmProvince">
+						<option label="Select a Province"></option>
+						<option value="Alberta">Alberta</option>
+						<option value="British Columbia">British Columbia</option>
+						<option value="Manitoba">Manitoba</option>
+						<option value="New Brunswick">New Brunswick</option>
+						<option value="Newfoundland and Labrador">Newfoundland and Labrador</option>
+						<option value="Northwest Territories">Northwest Territories</option>
+						<option value="Nova Scotia">Nova Scotia</option>
+						<option value="Nunavut">Nunavut</option>
+						<option value="Ontario">Ontario</option>
+						<option value="Prince Edward Island">Prince Edward Island</option>
+						<option value="Quebec">Quebec</option>
+						<option value="Saskatchewan">Saskatchewan</option>
+						<option value="Yukon">Yukon</option>
+					</select>
+				</div>
+				<div class="form-group">
+					<label for="pcodeca1"><span class="field-name">Postal code</span></label>
+					<input class="form-control" id="pcodeca1" name="pcodeca1" type="text" size="7" maxlength="7" data-rule-postalCodeCA="true" />
 				</div>
 			</fieldset>
-		<fieldset>
-			<legend class="required"><span class="field-name">Statut de citoyen</span> <strong class="required">(obligatoire)</strong></legend>
-			<div class="radio">
-				<label for="status1" class="required"><input type="radio" name="status" value="1" id="status1" required="required" />  Citoyen canadien</label>
-			</div>
-			<div class="radio">
-				<label for="status2"><input type="radio" name="status" value="2" id="status2" />  Résident permanent</label>
-			</div>
-			<div class="radio">
-				<label for="status3"><input type="radio" name="status" value="3" id="status3" />  Permis de travail</label>
-			</div>
-			<div class="radio">
-				<label for="status4"><input type="radio" name="status" value="4" id="status4" />  Autre</label>
-			</div>
-		</fieldset>
+			<fieldset class="form-group">
+				<label for="file1"><span class="field-name">File</span></label>
+				<input class="file1" name="file1" type="file" />
+			</fieldset>
 			<input type="button" onclick="submitForm('./exform2-fr.html')" value="Précédent" class="cancel btn btn-default" >
 			<input type="submit" value="Soumettre" class="btn btn-primary">
 		</form>
