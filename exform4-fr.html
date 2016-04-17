@@ -1,0 +1,320 @@
+<!DOCTYPE html><!--[if lt IE 9]><html class="no-js lt-ie9" lang="fr" dir="ltr"><![endif]--><!--[if gt IE 8]><!-->
+<html class="no-js" lang="fr" dir="ltr">
+<!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<!-- Web Experience Toolkit (WET) / Boîte à outils de l'expérience Web (BOEW)
+wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licence-fr.html -->
+<title>Exemple d'un formulaire</title>
+<meta content="width=device-width,initial-scale=1" name="viewport">
+<!-- Meta data -->
+<meta name="description" content="La Boîte à outils de l’expérience Web (BOEW) rassemble différents composants réutilisables et prêts-à-utiliser pour la conception et la mise à jour de sites Web innovateurs qui sont à la fois accessibles, conviviaux et interopérables. Tous ces composants réutilisables sont des logiciels libres mis à la disposition des ministères et des collectivités Web externes.">
+<!-- Meta data-->
+<!--[if gte IE 9 | !IE ]><!-->
+<link href="./lib/GCWeb/assets/favicon.ico" rel="icon" type="image/x-icon">
+<link rel="stylesheet" href="./lib/GCWeb/css/theme.min.css">
+<!--<![endif]-->
+<style type="text/css">
+input[list]::-webkit-calendar-picker-indicator {
+	display: none;
+}
+.fieldset fieldset legend {
+	font-weight: bold;
+	font-size: 1em;
+	border-top: none;
+	margin-bottom: 5px;
+}
+.dob-picker label {
+	display: block;
+}
+.dob-picker .form-group {
+	margin-right: 1em;
+}
+</style>
+<!--[if lt IE 9]>
+<link href="./lib/GCWeb/assets/favicon.ico" rel="shortcut icon" />
+
+<link rel="stylesheet" href="./lib/GCWeb/css/ie8-theme.min.css" />
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="./lib/wet-boew/js/ie8-wet-boew.min.js"></script>
+<![endif]-->
+<!--[if lte IE 9]>
+
+
+<![endif]-->
+<noscript><link rel="stylesheet" href="./lib/wet-boew/css/noscript.min.css" /></noscript>
+</head>
+<body vocab="http://schema.org/" typeof="WebPage">
+<ul id="wb-tphp">
+<li class="wb-slc">
+<a class="wb-sl" href="#wb-cont">Passer au contenu principal</a>
+</li>
+<li class="wb-slc visible-sm visible-md visible-lg">
+<a class="wb-sl" href="#wb-info">Passer à «&#160;À propos de ce site&#160;»</a>
+</li>
+</ul>
+<header role="banner">
+<div id="wb-bnr" class="container">
+<section id="wb-lng" class="visible-md visible-lg text-right">
+<h2 class="wb-inv">Sélection de la langue</h2>
+<div class="row">
+<div class="col-md-12">
+<ul class="list-inline margin-bottom-none">
+<li><a lang="en" href="./exform3-en.html">English</a></li>
+</ul>
+</div>
+</div>
+</section>
+<div class="row">
+<div class="brand col-xs-8 col-sm-9 col-md-6">
+<a href="http://www.canada.ca/fr/index.html"><object type="image/svg+xml" tabindex="-1" data="./lib/GCWeb/assets/sig-blk-fr.svg"></object><span class="wb-inv"> Gouvernement du Canada</span></a>
+</div>
+<section class="wb-mb-links col-xs-4 col-sm-3 visible-sm visible-xs" id="wb-glb-mn">
+<h2>Recherche et menus</h2>
+<ul class="list-inline text-right chvrn">
+<li><a href="#mb-pnl" title="Recherche et menus" aria-controls="mb-pnl" class="overlay-lnk" role="button"><span class="glyphicon glyphicon-search"><span class="glyphicon glyphicon-th-list"><span class="wb-inv">Recherche et menus</span></span></span></a></li>
+</ul>
+<div id="mb-pnl"></div>
+</section>
+<section id="wb-srch" class="col-xs-6 text-right visible-md visible-lg">
+<h2 class="wb-inv">Recherche</h2>
+<form action="#" method="post" name="cse-search-box" role="search" class="form-inline">
+<div class="form-group">
+<label for="wb-srch-q" class="wb-inv">Recherchez le site Web</label>
+<input id="wb-srch-q" list="wb-srch-q-ac" class="wb-srch-q form-control" name="q" type="search" value="" size="27" maxlength="150" placeholder="Rechercher dans Canada.ca">
+<datalist id="wb-srch-q-ac">
+<!--[if lte IE 9]><select><![endif]-->
+<!--[if lte IE 9]></select><![endif]-->
+</datalist>
+</div>
+<div class="form-group submit">
+<button type="submit" id="wb-srch-sub" class="btn btn-primary btn-small" name="wb-srch-sub"><span class="glyphicon-search glyphicon"></span><span class="wb-inv">Recherche</span></button>
+</div>
+</form>
+</section>
+</div>
+</div>
+<nav role="navigation" id="wb-sm" class="wb-menu visible-md visible-lg" data-trgt="mb-pnl" data-ajax-replace="//cdn.canada.ca/gcweb-cdn-live/sitemenu/sitemenu-fr.html" typeof="SiteNavigationElement">
+<h2 class="wb-inv">Menu des sujets</h2>
+<div class="container nvbar">
+<div class="row">
+<ul class="list-inline menu">
+<li><a href="http://www.edsc.gc.ca/fr/emplois/index.page">Emplois</a></li>
+<li><a href="http://www.cic.gc.ca/francais/index.asp">Immigration</a></li>
+<li><a href="http://voyage.gc.ca">Voyage</a></li>
+<li><a href="http://www.canada.ca/fr/services/entreprises/index.html">Entreprises</a></li>
+<li><a href="http://www.canada.ca/fr/services/prestations/index.html">Prestations</a></li>
+<li><a href="http://canadiensensante.gc.ca/index-fra.php">Santé</a></li>
+<li><a href="http://www.canada.ca/fr/services/impots/index.html">Impôts</a></li>
+<li><a href="http://www.canada.ca/fr/services/index.html">Autres services</a></li>
+</ul>
+</div>
+</div>
+</nav>
+<nav role="navigation" id="wb-bc" class="" property="breadcrumb">
+<h2 class="wb-inv">Vous êtes ici :</h2>
+<div class="container">
+<div class="row">
+<ol class="breadcrumb">
+<li><a href="http://www.canada.ca/fr/index.html">Accueil</a></li>
+<li>Page de contenu</li>
+</ol>
+</div>
+</div>
+</nav>
+</header>
+<main role="main" property="mainContentOfPage" class="container">
+	<h1 id="wb-cont" property="name">Exemple d'un formulaire d'application</h1>
+	<p>Ce formulaire n'est pas connecté à un serveur - les données ne sont pas enregistrées.</p>
+	<div class="wb-frmvld">
+		<form action="./done-fr.html" method="get" id="validation-example" novalidate>
+			<fieldset class="form-group">
+				<legend>Votre date de naissance à nouveau</legend>
+				<p id="dob-desc">Différents formats -n'oubliez pas de changer le mois.</p>
+				<div class="form-inline dob-picker">
+					<div class="form-group">
+						<label for="dob2yy"><span class="field-name">Année</span> (AAAA)</label>
+						<input class="form-control" id="dob2yy" name="dob2yy" type="text" size=4 pattern="[0-9]{4}">
+					</div>
+					<div class="form-group">
+						<label for="dob2mm"><span class="field-name">Mois</span></label>
+						<select class="form-control" id="dob2mm" name="dob2mm" aria-describedby="dob-desc">
+							<option label="mois"></option>
+							<option value='01'>janvier</option>
+							<option value='02'>février</option>
+							<option value='03'>mars</option>
+							<option value='04'>avril</option>
+							<option value='05'>mai</option>
+							<option value='06'>juin</option>
+							<option value='07'>juillet</option>
+							<option value='08'>août</option>
+							<option value='09'>septembre</option>
+							<option value='10'>octobre</option>
+							<option value='11'>novembre</option>
+							<option value='12'>décembre</option>
+						</select>
+					</div>
+					<div class="form-group">
+						<label for="dob2dd"><span class="field-name">Jour</span></label>
+						<select class="form-control" id="dob2dd" name="dob2dd">
+							<option label="Jour"></option>
+							<option value='01'>01</option>
+							<option value='02'>02</option>
+							<option value='03'>03</option>
+							<option value='04'>04</option>
+							<option value='05'>05</option>
+							<option value='06'>06</option>
+							<option value='07'>07</option>
+							<option value='08'>08</option>
+							<option value='09'>09</option>
+							<option value='10'>10</option>
+							<option value='11'>11</option>
+							<option value='12'>12</option>
+							<option value='13'>13</option>
+							<option value='14'>14</option>
+							<option value='15'>15</option>
+							<option value='16'>16</option>
+							<option value='17'>17</option>
+							<option value='18'>18</option>
+							<option value='19'>19</option>
+							<option value='20'>20</option>
+							<option value='21'>21</option>
+							<option value='22'>22</option>
+							<option value='23'>23</option>
+							<option value='24'>24</option>
+							<option value='25'>25</option>
+							<option value='26'>26</option>
+							<option value='27'>27</option>
+							<option value='28'>28</option>
+							<option value='29'>29</option>
+							<option value='30'>30</option>
+							<option value='31'>31</option>
+						</select>
+					</div>
+				</div>
+			</fieldset>
+		<fieldset>
+			<legend class="required"><span class="field-name">Statut de citoyen</span> <strong class="required">(obligatoire)</strong></legend>
+			<div class="radio">
+				<label for="status1" class="required"><input type="radio" name="status" value="1" id="status1" required="required" />  Citoyen canadien</label>
+			</div>
+			<div class="radio">
+				<label for="status2"><input type="radio" name="status" value="2" id="status2" />  Résident permanent</label>
+			</div>
+			<div class="radio">
+				<label for="status3"><input type="radio" name="status" value="3" id="status3" />  Permis de travail</label>
+			</div>
+			<div class="radio">
+				<label for="status4"><input type="radio" name="status" value="4" id="status4" />  Autre</label>
+			</div>
+		</fieldset>
+			<input type="button" onclick="submitForm('./exform2-fr.html')" value="Précédent" class="cancel btn btn-default" >
+			<input type="submit" value="Soumettre" class="btn btn-primary">
+		</form>
+	</div>
+	<dl id="wb-dtmd">
+		<dt>Date de modification&#160;:&#32;</dt>
+		<dd><time property="dateModified">2015-01-28</time></dd>
+	</dl>
+</main>
+<aside class="gc-nttvs container">
+    <h2>Activités et initiatives du gouvernement du Canada</h2>
+    <div id="gcwb_prts" class="wb-eqht row" data-ajax-replace="//cdn.canada.ca/gcweb-cdn-live/features/features-en.html">
+        <p class="mrgn-lft-md"><a href="http://www.canada.ca/activities.html">Accédez aux activités et initiatives du gouvernement du Canada</a></p>
+    </div>
+</aside>
+<footer role="contentinfo" id="wb-info">
+<nav role="navigation" class="container visible-sm visible-md visible-lg wb-navcurr">
+<h2 class="wb-inv">À propos de ce site</h2>
+<div class="row">
+<div class="col-sm-3 col-lg-3">
+<section>
+<h3>Coordonnées</h3>
+<ul class="list-unstyled">
+<li><a href="#">Lien 1</a></li>
+<li><a href="#">Lien 2</a></li>
+<li><a href="#">Lien 3</a></li>
+</ul>
+</section>
+<section>
+<h3>Nouvelles</h3>
+<ul class="list-unstyled">
+<li><a href="http://nouvelles.gc.ca/web/index-fr.do">Salle de presse</a></li>
+<li><a href="http://nouvelles.gc.ca/web/nwsprdct-fr.do?mthd=tp&amp;crtr.tp1D=1">Communiqués de presse</a></li>
+<li><a href="http://nouvelles.gc.ca/web/nwsprdct-fr.do?mthd=tp&amp;crtr.tp1D=3">Avis aux médias</a></li>
+<li><a href="http://nouvelles.gc.ca/web/nwsprdct-fr.do?mthd=tp&amp;crtr.tp1D=970">Discours</a></li>
+<li><a href="http://nouvelles.gc.ca/web/nwsprdct-fr.do?mthd=tp&amp;crtr.tp1D=980">Déclarations</a></li>
+</ul>
+</section>
+</div>
+<section class="col-sm-3 col-lg-3">
+<h3>Gouvernement</h3>
+<ul class="list-unstyled">
+<li><a href="http://www.canada.ca/fr/gouv/systeme">Comment le gouvernement fonctionne</a></li>
+<li><a href="http://www.canada.ca/fr/gouv/min">Ministères et organismes</a></li>
+<li><a href="http://pm.gc.ca/fra">Premier ministre</a></li>
+<li><a href="http://www.canada.ca/fr/gouv/ministres">Ministres</a></li>
+<li><a href="http://www.canada.ca/fr/gouv/fonctionpublique">Fonction publique et force militaire</a></li>
+<li><a href="http://www.canada.ca/fr/gouv/politique">Politiques, règlements et lois</a></li>
+<li><a href="http://www.canada.ca/fr/gouv/bibliotheques">Bibliothèques</a></li>
+<li><a href="http://www.canada.ca/fr/gouv/publications">Publications</a></li>
+<li><a href="http://www.canada.ca/fr/gouv/statistiques">Statistiques et données</a></li>
+<li><a href="http://www.canada.ca/fr/nouveausite.html">À propos de Canada.ca</a></li>
+</ul>
+</section>
+<section class="col-sm-3 col-lg-3 brdr-lft">
+<h3>Transparence</h3>
+<ul class="list-unstyled">
+<li><a href="http://www.canada.ca/fr/transparence/rapports.html">Établissement de rapports à l’échelle du gouvernement</a></li>
+<li><a href="http://ouvert.canada.ca/fr">Gouvernement ouvert</a></li>
+<li><a href="http://www.canada.ca/fr/transparence/divulgation.html">Divulgation proactive</a></li>
+<li><a href="http://www.canada.ca/fr/transparence/avis.html">Avis</a></li>
+<li><a href="http://www.canada.ca/fr/transparence/confidentialite.html">Confidentialité</a></li>
+</ul>
+</section>
+<div class="col-sm-3 col-lg-3 brdr-lft">
+<section>
+<h3>Rétroaction</h3>
+<p><a href="http://www.canada.ca/fr/contact/retroaction.html"><img src="./lib/GCWeb/assets/feedback.png" alt="Rétroaction sur ce site Web"></a></p>
+</section>
+<section>
+<h3>Médias sociaux</h3>
+<p><a href="http://www.canada.ca/fr/sociaux"><img src="./lib/GCWeb/assets/social.png" alt="Médias sociaux"></a></p>
+</section>
+<section>
+<h3>Centre mobile</h3>
+<p><a href="http://www.canada.ca/fr/mobile"><img src="./lib/GCWeb/assets/mobile.png" alt="Centre mobile"></a></p>
+</section>
+</div>
+</div>
+</nav>
+<div class="brand">
+<div class="container">
+<div class="row">
+<div class="col-xs-6 visible-sm visible-xs tofpg">
+<a href="#wb-cont">Haut de la page <span class="glyphicon glyphicon-chevron-up"></span></a>
+</div>
+<div class="col-xs-6 col-md-12 text-right">
+<object type="image/svg+xml" tabindex="-1" role="img" data="./lib/GCWeb/assets/wmms-blk.svg" aria-label="Symbole du gouvernement du Canada"></object>
+</div>
+</div>
+</div>
+</div>
+</footer>
+<!--[if gte IE 9 | !IE ]><!-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="./lib/wet-boew/js/wet-boew.min.js"></script>
+<!--<![endif]-->
+<!--[if lt IE 9]>
+<script src="./lib/wet-boew/js/ie8-wet-boew2.min.js"></script>
+
+<![endif]-->
+<script type="text/javascript">
+function submitForm(action)
+{
+	document.getElementById('validation-example').action = action;
+	document.getElementById('validation-example').submit();
+}
+</script>
+</body>
+</html>
