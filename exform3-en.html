@@ -130,7 +130,7 @@ input[list]::-webkit-calendar-picker-indicator {
 		<form action="./exform4-en.html" method="get" id="validation-example" novalidate>
 			<fieldset class="form-group">
 				<legend>What is your date of birth again?</legend>
-				<p id="dob-desc">Another input format to try for your date of birth. Remember to switch the month.</p>
+				<p id="dob-desc">Another input format to try for your date of birth.</p>
 				<div class="form-inline dob-picker">
 					<div class="form-group">
 						<label for="dob2yy"><span class="field-name">Year</span> (YYYY)</label>
@@ -138,7 +138,7 @@ input[list]::-webkit-calendar-picker-indicator {
 					</div>
 					<div class="form-group">
 						<label for="dob2mm"><span class="field-name">Month</span></label>
-						<select class="form-control" id="dob2mm" name="dob2mm" aria-describedby="dob-desc">
+						<select class="form-control" id="dob2mm" name="dob2mm">
 							<option label="Month"></option>
 							<option value='01'>January</option>
 							<option value='02'>February</option>
@@ -193,13 +193,11 @@ input[list]::-webkit-calendar-picker-indicator {
 					</div>
 				</div>
 			</fieldset>
-			<fieldset class="form-group">
-				<div class="form-group">
+			<fieldset>
 				<legend class="required"><span class="field-name">Citizenship status</span> <strong class="required">(required)</strong></legend>
-					<p id="cc-desc">Choose which citizenship status you hold.</p>
-					<div class="radio">
-						<label for="status1"><input type="radio" name="status" value="1" id="status1" required="required" ariadescribedby="cc-desc"/>&#160;&#160;Canadian citizen</label>
-					</div>
+				<div class="radio">
+					<label for="status1"><input type="radio" name="status" value="1" id="status1" required="required"/>&#160;&#160;Canadian citizen</label>
+				</div>
 				<div class="radio">
 					<label for="status2"><input type="radio" name="status" value="2" id="status2" />&#160;&#160;Permanent resident</label>
 				</div>
@@ -208,7 +206,6 @@ input[list]::-webkit-calendar-picker-indicator {
 				</div>
 				<div class="radio">
 					<label for="status4"><input type="radio" name="status" value="4" id="status4" />&#160;&#160;Other</label>
-				</div>
 			</fieldset>
 			<fieldset>
 			<legend class="field-name" id="ast-dec">Other assistive technologies used (check all that apply): </legend>
@@ -225,16 +222,13 @@ input[list]::-webkit-calendar-picker-indicator {
 					<label for="technology4"><input type="checkbox" name="assistive technology" value="4" id="technology4" />&#160;&#160;Screen magnifier</label>
 				</div>
 			</fieldset>
-			<fieldset class="form-group">
-				<div class="form-group">
-					<legend class="field-name">For questions with only 2 possible answers, which format works better for you?</legend>
-					<p id="ef-desc">Choose the option that requires the least effort for you.</p>
-					<div class="radio">
-						<label for="radio1"><input type="radio" name="effort" value="1" id="radio1" ariadescribedby="cc-desc"/>&#160;&#160;Radio buttons like these</label>
-					</div>
-					<div class="radio">
-						<label for="radio2"><input type="radio" name="effort" value="2" id="radio2" />&#160;&#160;A dropdown menu</label>
-					</div>
+			<fieldset>
+				<legend class="field-name">For questions with only 2 possible answers, which format works better for you?</legend>
+				<div class="radio">
+						<label for="radio1"><input type="radio" name="effort" value="1" id="radio1"/>&#160;&#160;Radio buttons like these</label>
+				</div>
+				<div class="radio">
+						<label for="radio2"><input type="radio" name="effort" value="2" id="radio2" />&#160;&#160;A menu (also called a combo box)</label>
 				</div>
 			</fieldset>
 			<input type="button" onclick="submitForm('./exform2-en.html')" value="Previous" class="cancel btn btn-default" >
