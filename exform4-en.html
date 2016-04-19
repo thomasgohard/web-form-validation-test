@@ -129,10 +129,10 @@ input[list]::-webkit-calendar-picker-indicator {
 	<div class="wb-frmvld">
 		<form action="./done-en.html" method="get" id="validation-example" novalidate>
 			<fieldset class="form-group">
-				<legend>What is your address?</legend>
+				<legend>Mailing address</legend>
 				<p id="country-desc">Start typing the name of the country, then select from the list.</p>
 				<label for="country2" ><span class="field-name">Country</span></label>
-				<input class="form-control" type="text" id="country2" name="country2" list="suggestions" placeholder="Start typing..." />
+				<input class="form-control" type="text" id="country2" name="country2" list="suggestions" placeholder="Start typing..." ariadescribedby="country-desc" />
 				<datalist id="suggestions">
 					<!--[if lte IE 9]><select><![endif]-->
 					<option value="afghanistan">Afghanistan</option>
@@ -371,12 +371,12 @@ input[list]::-webkit-calendar-picker-indicator {
 			</fieldset>
 			<fieldset>
 				<div class="form-group">
-					<label for="frmAddressS" ><span class="field-name">Address</span></label>
-					<input class="form-control" id="frmAddressS" name="ship-address" placeholder="123, Any Street" autocomplete="shipping street-address"/>
+					<label for="st-address" ><span class="field-name">Street address</span></label>
+					<input class="form-control" id="st-address" name="st-address" size="35" autocomplete="shipping street-address"/>
 				</div>
 				<div class="form-group">
-					<label for="frmCityS" ><span class="field-name">City</span></label>
-					<input class="form-control" id="frmCityS" name="ship-city" placeholder="Ottawa" autocomplete="shipping locality"/>
+					<label for="frmCity" ><span class="field-name">City</span></label>
+					<input class="form-control" id="frmCity" name="frmCity" autocomplete="shipping locality"/>
 				</div>
 				<div class="form-group">
 					<label for="frmProvince"><span class="field-name">Province</span></label>
@@ -398,13 +398,14 @@ input[list]::-webkit-calendar-picker-indicator {
 					</select>
 				</div>
 				<div class="form-group">
-					<label for="pcodeca1"><span class="field-name">Postal code</span></label>
-					<input class="form-control" id="pcodeca1" name="pcodeca1" type="text" size="7" maxlength="7" data-rule-postalCodeCA="true" />
+					<label for="pcodeca"><span class="field-name">Postal code</span></label>
+					<input class="form-control" id="pcodeca" name="pcodeca" type="text" size="7" maxlength="7" />
 				</div>
 			</fieldset>
 			<fieldset class="form-group">
-				<label for="file1"><span class="field-name">File</span></label>
-				<input class="file1" name="file1" type="file" />
+				<label for="file1"><span class="field-name">Attach any file:</span></label>
+				<p id="attach-desc">We want to understand how people attach files to webforms. Attach then remove any photo or file.</p>
+				<input class="file1" name="file1" type="file" ariadescribedby="attach-desc" />
 			</fieldset>
 			<!--
 			<fieldset class="form-group">
