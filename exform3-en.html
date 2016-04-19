@@ -133,7 +133,7 @@ input[list]::-webkit-calendar-picker-indicator {
 				<p id="dob-desc">Different format to try for birth date. Remember to switch the month.</p>
 				<div class="form-inline dob-picker">
 					<div class="form-group">
-						<label for="dob2yy"><span class="field-name">Year</span> (YYYY)</label>
+						<label for="dob2yy"><span class="field-name">Birth Year</span> (YYYY)</label>
 						<input class="form-control" id="dob2yy" name="dob2yy" type="text" size=4 pattern="[0-9]{4}">
 					</div>
 					<div class="form-group">
@@ -209,6 +209,21 @@ input[list]::-webkit-calendar-picker-indicator {
 					<label for="status4"><input type="radio" name="status" value="4" id="status4" />&#160;&#160;Other</label>
 				</div>
 			</fieldset>
+			<fieldset>
+			<legend class="required"><span class="field-name">Other assistive technologies used (check all that apply):</span> </legend>
+			<div class="checkbox">
+				<label for="technology1"><input type="checkbox" name="assistive technology" value="1" id="technology1" />&#160;&#160;Braille reader</label>
+			</div>
+			<div class="checkbox">
+				<label for="technology2"><input type="checkbox" name="assistive technology" value="2" id="technology3" />&#160;&#160;Video magnifier</label>
+			</div>
+			<div class="checkbox">
+				<label for="technology3"><input type="checkbox" name="assistive technology" value="3" id="technology3" />&#160;&#160;Optical character recognition</label>
+			</div>
+			<div class="checkbox">
+				<label for="technology4"><input type="checkbox" name="assistive technology" value="4" id="technology4" />&#160;&#160;Screen magnifier</label>
+			</div>
+		</fieldset>
 			<input type="button" onclick="submitForm('./exform2-en.html')" value="Previous" class="cancel btn btn-default" >
 			<input type="submit" value="Next" class="btn btn-primary">
 		</form>
