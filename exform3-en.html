@@ -130,11 +130,11 @@ input[list]::-webkit-calendar-picker-indicator {
 		<form action="./exform4-en.html" method="get" id="validation-example" novalidate>
 			<fieldset class="form-group">
 				<legend>What is your date of birth again?</legend>
-				<p id="dob-desc">Different format to try for birth date. Remember to switch the month.</p>
+				<p id="dob-desc">Another input format to try for your date of birth. Remember to switch the month.</p>
 				<div class="form-inline dob-picker">
 					<div class="form-group">
 						<label for="dob2yy"><span class="field-name">Birth Year</span> (YYYY)</label>
-						<input class="form-control" id="dob2yy" name="dob2yy" type="text" size=4 pattern="[0-9]{4}">
+						<input class="form-control" id="dob2yy" name="dob2yy" type="text" size=4 pattern="[0-9]{4}" aria-describedby="dob-desc>
 					</div>
 					<div class="form-group">
 						<label for="dob2mm"><span class="field-name">Month</span></label>
@@ -196,8 +196,10 @@ input[list]::-webkit-calendar-picker-indicator {
 			<fieldset class="form-group">
 				<div class="form-group">
 				<legend class="required"><span class="field-name">Citizenship status</span> <strong class="required">(required)</strong></legend>
+					<p id="cc-desc">Choose which citizenship status you hold.</p>
+		
 					<div class="radio">
-						<label for="status1"><input type="radio" name="status" value="1" id="status1" required="required" />&#160;&#160;Canadian citizen</label>
+						<label for="status1"><input type="radio" name="status" value="1" id="status1" required="required" ariadescribedby="cc-desc"/>&#160;&#160;Canadian citizen</label>
 					</div>
 				<div class="radio">
 					<label for="status2"><input type="radio" name="status" value="2" id="status2" />&#160;&#160;Permanent resident</label>
@@ -210,9 +212,9 @@ input[list]::-webkit-calendar-picker-indicator {
 				</div>
 			</fieldset>
 			<fieldset>
-			<legend class="required"><span class="field-name">Other assistive technologies used (check all that apply):</span> </legend>
+			<legend class="field-name" id="ast-dec">Other assistive technologies used (check all that apply): </legend>
 			<div class="checkbox">
-				<label for="technology1"><input type="checkbox" name="assistive technology" value="1" id="technology1" />&#160;&#160;Braille reader</label>
+				<label for="technology1"><input type="checkbox" name="assistive technology" value="1" id="technology1" ariadescribedby="ast-dec" />&#160;&#160;Braille reader</label>
 			</div>
 			<div class="checkbox">
 				<label for="technology2"><input type="checkbox" name="assistive technology" value="2" id="technology3" />&#160;&#160;Video magnifier</label>
