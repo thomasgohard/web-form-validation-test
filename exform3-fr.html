@@ -124,13 +124,13 @@ input[list]::-webkit-calendar-picker-indicator {
 </nav>
 </header>
 <main role="main" property="mainContentOfPage" class="container">
-	<h1 id="wb-cont" property="name">Exemple d'un formulaire d'application</h1>
+	<h1 id="wb-cont" property="name">Exemple d'un formulaire d'application 3</h1>
 	<p>Ce formulaire n'est pas connecté à un serveur - les données ne sont pas enregistrées.</p>
 	<div class="wb-frmvld">
 		<form action="./exform4-fr.html" method="get" id="validation-example" novalidate>
 			<fieldset class="form-group">
 				<legend>Votre date de naissance à nouveau</legend>
-				<p id="dob-desc">Différents formats -n'oubliez pas de changer le mois.</p>
+				<p id="dob-desc">Différents formats pour votre date de naissance.</p>
 				<div class="form-inline dob-picker">
 					<div class="form-group">
 						<label for="dob2yy"><span class="field-name">Année</span> (AAAA)</label>
@@ -138,7 +138,7 @@ input[list]::-webkit-calendar-picker-indicator {
 					</div>
 					<div class="form-group">
 						<label for="dob2mm"><span class="field-name">Mois</span></label>
-						<select class="form-control" id="dob2mm" name="dob2mm" aria-describedby="dob-desc">
+						<select class="form-control" id="dob2mm" name="dob2mm">
 							<option label="mois"></option>
 							<option value='01'>janvier</option>
 							<option value='02'>février</option>
@@ -208,6 +208,29 @@ input[list]::-webkit-calendar-picker-indicator {
 				<label for="status4"><input type="radio" name="status" value="4" id="status4" />  Autre</label>
 			</div>
 		</fieldset>
+		<fieldset>
+			<legend class="field-name">Autres technologies d'assistance utilisées (cochez toutes les cases )</legend>
+			<div class="checkbox">
+				<label for="animal1"><input type="checkbox" name="animal" value="1" id="animal1" />&#160;&#160;Lecteur Braille</label>
+			</div>
+			<div class="checkbox">
+				<label for="animal2"><input type="checkbox" name="animal" value="2" id="animal2" />&#160;&#160;Magnifier vidéo</label>
+			</div>
+			<div class="checkbox">
+				<label for="animal3"><input type="checkbox" name="animal" value="3" id="animal3" />&#160;&#160;Reconnaissance optique de caractères</label>
+			</div>
+			<div class="checkbox">
+				<label for="animal4"><input type="checkbox" name="animal" value="4" id="animal4" />&#160;&#160;Autre</label>
+			</div>
+		</fieldset>
+		<fieldset>
+			<legend class="field-name">Pour des questions avec seulement 2 réponses, quel format fonctionne mieux pour vous?</legend>
+			<div class="radio">
+				<label for="statuss1"><input type="radio" name="status" value="1" id="statuss1"/>  Les boutons radio comme ceux-ci</label>
+			</div>
+			<div class="radio">
+				<label for="statuss2"><input type="radio" name="status" value="2" id="statuss2" />  Un menu </label>
+			</div>
 			<input type="button" onclick="submitForm('./exform2-fr.html')" value="Précédent" class="cancel btn btn-default" >
 			<input type="submit" value="Suivant" class="btn btn-primary">
 		</form>
