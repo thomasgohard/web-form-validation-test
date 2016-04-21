@@ -129,8 +129,10 @@ input[list]::-webkit-calendar-picker-indicator {
 	<div class="wb-frmvld">
 		<form action="./done-fr.html" method="get" id="validation-example" novalidate>
 			<fieldset class="form-group">
-				<label for="country1"><span class="field-name">Pays</span></label>
-				<select class="form-control" id="country1" name="country1">
+				<p id="country-desc">Start typing the name of the country, then select from the list.</p>
+				<label for="country2" ><span class="field-name">Pays</span></label>
+				<input class="form-control" type="text" id="country2" name="country2" list="suggestions" placeholder="Start typing..." ariadescribedby="country-desc" />
+				<datalist id="suggestions">
 					<option value="acores">A&#231;ores</option>
 					<option value="afghanistan">Afghanistan</option>
 					<option value="afrique-du-sud">Afrique du Sud</option>
