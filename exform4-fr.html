@@ -133,6 +133,7 @@ input[list]::-webkit-calendar-picker-indicator {
 				<label for="country2" ><span class="field-name">Pays</span></label>
 				<input class="form-control" type="text" id="country2" name="country2" list="suggestions" placeholder="Start typing..." ariadescribedby="country-desc" />
 				<datalist id="suggestions">
+					<!--[if lte IE 9]><select><![endif]-->
 					<option value="acores">A&#231;ores</option>
 					<option value="afghanistan">Afghanistan</option>
 					<option value="afrique-du-sud">Afrique du Sud</option>
@@ -362,7 +363,8 @@ input[list]::-webkit-calendar-picker-indicator {
 					<option value="yemen">Y&#233;men</option>
 					<option value="zambie">Zambie</option>
 					<option value="zimbabwe">Zimbabwe</option>
-				</select>
+					<!--[if lte IE 9]></select><![endif]-->
+				</datalist>
 			</fieldset>
 			<fieldset>
 				<div class="form-group">
