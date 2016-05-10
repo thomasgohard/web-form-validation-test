@@ -1,0 +1,1076 @@
+<!DOCTYPE html><!--[if lt IE 9]><html class="no-js lt-ie9" lang="en" dir="ltr"><![endif]--><!--[if gt IE 8]><!-->
+<html class="no-js" lang="en" dir="ltr">
+<!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<!-- Web Experience Toolkit (WET) / Boîte à outils de l'expérience Web (BOEW)
+wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licence-fr.html -->
+<title>Form Usability Test</title>
+<meta content="width=device-width,initial-scale=1" name="viewport">
+<!-- Meta data -->
+<meta name="description" content="Provides generic validation and error message handling for Web forms.">
+<!-- Meta data-->
+<!--[if gte IE 9 | !IE ]><!-->
+<link href="./lib/GCWeb/assets/favicon.ico" rel="icon" type="image/x-icon">
+<link rel="stylesheet" href="./lib/GCWeb/css/theme.min.css">
+<!--<![endif]-->
+<!--[if lt IE 9]>
+<link href="./lib/GCWeb/assets/favicon.ico" rel="shortcut icon" />
+
+<link rel="stylesheet" href="./lib/GCWeb/css/ie8-theme.min.css" />
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="./lib/wet-boew/js/ie8-wet-boew.min.js"></script>
+<![endif]-->
+<!--[if lte IE 9]>
+
+
+<![endif]-->
+<noscript><link rel="stylesheet" href="./lib/wet-boew/css/noscript.min.css" /></noscript>
+</head>
+<body vocab="http://schema.org/" typeof="WebPage">
+<ul id="wb-tphp">
+<li class="wb-slc">
+<a class="wb-sl" href="#wb-cont">Skip to main content</a>
+</li>
+<li class="wb-slc visible-sm visible-md visible-lg">
+<a class="wb-sl" href="#wb-info">Skip to "About this site"</a>
+</li>
+</ul>
+<header role="banner">
+<div id="wb-bnr" class="container">
+<section id="wb-lng" class="visible-md visible-lg text-right">
+<h2 class="wb-inv">Language selection</h2>
+<div class="row">
+<div class="col-md-12">
+<ul class="list-inline margin-bottom-none">
+<li><a lang="fr" href="done-fr.html">Français</a></li>
+</ul>
+</div>
+</div>
+</section>
+<div class="row">
+<div class="brand col-xs-8 col-sm-9 col-md-6">
+<a href="http://www.canada.ca/en/index.html"><object type="image/svg+xml" tabindex="-1" data="./lib/GCWeb/assets/sig-blk-en.svg"></object><span class="wb-inv"> Government of Canada</span></a>
+</div>
+<section class="wb-mb-links col-xs-4 col-sm-3 visible-sm visible-xs" id="wb-glb-mn">
+<h2>Search and menus</h2>
+<ul class="list-inline text-right chvrn">
+<li><a href="#mb-pnl" title="Search and menus" aria-controls="mb-pnl" class="overlay-lnk" role="button"><span class="glyphicon glyphicon-search"><span class="glyphicon glyphicon-th-list"><span class="wb-inv">Search and menus</span></span></span></a></li>
+</ul>
+<div id="mb-pnl"></div>
+</section>
+<section id="wb-srch" class="col-xs-6 text-right visible-md visible-lg">
+<h2 class="wb-inv">Search</h2>
+<form action="#" method="post" name="cse-search-box" role="search" class="form-inline">
+<div class="form-group">
+<label for="wb-srch-q" class="wb-inv">Search website</label>
+<input id="wb-srch-q" list="wb-srch-q-ac" class="wb-srch-q form-control" name="q" type="search" value="" size="27" maxlength="150" placeholder="Search Canada.ca">
+<datalist id="wb-srch-q-ac">
+<!--[if lte IE 9]><select><![endif]-->
+<!--[if lte IE 9]></select><![endif]-->
+</datalist>
+</div>
+<div class="form-group submit">
+<button type="submit" id="wb-srch-sub" class="btn btn-primary btn-small" name="wb-srch-sub"><span class="glyphicon-search glyphicon"></span><span class="wb-inv">Search</span></button>
+</div>
+</form>
+</section>
+</div>
+</div>
+<nav role="navigation" id="wb-sm" class="wb-menu visible-md visible-lg" data-trgt="mb-pnl" data-ajax-replace="//cdn.canada.ca/gcweb-cdn-live/sitemenu/sitemenu-en.html" typeof="SiteNavigationElement">
+<h2 class="wb-inv">Topics menu</h2>
+<div class="container nvbar">
+<div class="row">
+<ul class="list-inline menu">
+<li><a href="http://www.esdc.gc.ca/en/jobs/index.page">Jobs</a></li>
+<li><a href="http://www.cic.gc.ca/english/index.asp">Immigration</a></li>
+<li><a href="http://travel.gc.ca">Travel</a></li>
+<li><a href="http://www.canada.ca/en/services/business/index.html">Business</a></li>
+<li><a href="http://www.canada.ca/en/services/benefits/index.html">Benefits</a></li>
+<li><a href="http://healthycanadians.gc.ca/index-eng.php">Health</a></li>
+<li><a href="http://www.canada.ca/en/services/taxes/index.html">Taxes</a></li>
+<li><a href="http://www.canada.ca/en/services/index.html">More services</a></li>
+</ul>
+</div>
+</div>
+</nav>
+<nav role="navigation" id="wb-bc" class="" property="breadcrumb">
+<h2 class="wb-inv">You are here:</h2>
+<div class="container">
+<div class="row">
+<ol class="breadcrumb">
+<li><a href="http://www.canada.ca/en/index.html">Home</a></li>
+<li>Content page</li>
+</ol>
+</div>
+</div>
+</nav>
+</header>
+<main role="main" property="mainContentOfPage" class="container">
+  <div class="row profile">
+    <div class="col-md-12">
+      <h1 property="name" id="wb-cont">Departments and agencies</h1>
+      <p class="pagetag">Find links to current Government of Canada Departments, Agencies, Crown Corporations, Special Operating Agencies and other related organizations.</p>
+    </div>
+  </div>
+<table class="wb-tables table" data-wb-tables="{&quot;oLanguage&quot;:{&quot;sSearch&quot;:&quot;Contains:&quot;,&quot;sSearchPlaceholder&quot;:&quot;Keywords&quot;},&quot;iDisplayLength&quot;:25}">
+       <thead>
+          <tr>
+            <th>Organizations</th>
+            <th>Abbr.</th>
+          </tr>
+        </thead>
+        <tbody>
+	<tr>
+		<td><a href="https://www.canada.ca/en/agriculture-agri-food.html">Agriculture and Agri-Food Canada</a></td>
+		<td>AAFC</td>
+	</tr>
+	<tr>
+		<td><a href="http://cart-crac.gc.ca/eng/canada-agricultural-review-tribunal/?id=1277928993362">Canada Agricultural Review Tribunal</a></td>
+		<td>CART</td>
+	</tr>
+	<tr>
+		<td><a href="http://www.cdc-ccl.gc.ca/CDC/index-eng.php">Canadian Dairy Commission</a></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td><a href="https://www.canada.ca/en/grain-commission.html">Canadian Grain Commission</a></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td><a href="http://www.agr.gc.ca/eng/about-us/partners-and-agencies/canadian-pari-mutuel-agency/?id=1204043533186">Canadian Pari-Mutuel Agency</a></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td><a href="https://www.fcc-fac.ca/en.html">Farm Credit Canada</a></td>
+		<td>FCC</td>
+	</tr>
+	<tr>
+		<td><a href="https://www.canada.ca/en/farm-products-council.html">Farm Products Council of Canada</a></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td><a href="https://www.canada.ca/en/atlantic-canada-opportunities.html">Atlantic Canada Opportunities Agency</a></td>
+		<td>ACOA</td>
+	</tr>
+	<tr>
+		<td><a href="https://www.canada.ca/en/economic-development-quebec-regions.html">Canada Economic Development for Quebec Regions</a></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td><a href="/en/revenue-agency.html">Canada Revenue Agency</a></td>
+		<td>CRA</td>
+	</tr>
+	<tr>
+		<td><a href="http://www.oto-boc.gc.ca/menu-eng.html">Taxpayers' Ombudsman (Office of the)</a></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td><a href="https://www.canada.ca/en/canadian-heritage.html">Canadian Heritage</a></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td><a href="http://cafmuseum.techno-science.ca/en/index.php">Canada Agriculture and Food Museum</a></td>
+		<td>CAFM</td>
+	</tr>
+	<tr>
+		<td><a href="http://casmuseum.techno-science.ca/en/index.php">Canada Aviation and Space Museum</a></td>
+		<td>CASM</td>
+	</tr>
+	<tr>
+		<td><a href="http://canadacouncil.ca/en">Canada Council for the Arts</a></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td><a href="http://techno-science.ca/en/index.php">Canada Science and Technology Museum Corporation</a></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td><a href="http://www.cci-icc.gc.ca/index-eng.aspx">Canadian Conservation Institute</a></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td><a href="http://www.pch.gc.ca/eng/1346091768788/1346092823346">Canadian Cultural Property Export Review Board</a></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td><a href="http://www.rcip-chin.gc.ca/index-eng.jsp">Canadian Heritage Information Network</a></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td><a href="https://humanrights.ca/">Canadian Museum for Human Rights</a></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td><a href="http://cmcp.gallery.ca/mcfarland/en/plan_your_visit.htm">Canadian Museum of Contemporary Photography</a></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td><a href="http://www.historymuseum.ca/home">Canadian Museum of History </a></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td><a href="http://www.pier21.ca/home">Canadian Museum of Immigration at Pier 21</a></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td><a href="http://nature.ca/en/home">Canadian Museum of Nature</a></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td><a href="http://www.crtc.gc.ca/eng/home-accueil.htm">Canadian Radio-Television and Telecommunications Commission</a></td>
+		<td>CRTC</td>
+	</tr>
+	<tr>
+		<td><a href="http://www.warmuseum.ca/home/?CategoryID=654">Canadian War Museum</a></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td><a href="http://www.cbc.radio-canada.ca/en/">CBC/Radio-Canada</a></td>
+		<td>CBC</td>
+	</tr>
+	<tr>
+		<td><a href="http://www.pc.gc.ca/clmhc-hsmbc/index.aspx">Historic Sites and Monuments Board of Canada</a></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td><a href="https://www.canada.ca/en/library-archives.html">Library and Archives Canada</a></td>
+		<td>LAC</td>
+	</tr>
+	<tr>
+		<td><a href="http://nac-cna.ca/en/">National Arts Centre</a></td>
+		<td>NAC</td>
+	</tr>
+	<tr>
+		<td><a href="http://www.ccbn-nbc.gc.ca/en/">National Battlefields Commission</a></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td><a href="https://www.canada.ca/en/national-film-board.html">National Film Board</a></td>
+		<td>NFB</td>
+	</tr>
+	<tr>
+		<td><a href="http://www.gallery.ca/english/index.html">National Gallery of Canada</a></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td><a href="http://cstmuseum.techno-science.ca/en/">National Museum of Science and Technology</a></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td><a href="http://www.psdpt-tpfd.gc.ca/Home-eng.html">Public Servants Disclosure Protection Tribunal Canada</a></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td><a href="https://www.canada.ca/en/public-service-commission.html">Public Service Commission of Canada</a></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td><a href="http://pslreb-crtefp.gc.ca/index_e.asp">Public Service Labour Relations and Employment Board</a></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td><a href="http://canada.pch.gc.ca/eng/1414151906468">Sport Canada</a></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td><a href="https://www.canada.ca/en/status-women.html">Status of Women Canada</a></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td><a href="http://www.telefilm.ca/en/?q=en">Telefilm Canada</a></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td><a href="http://www.virtualmuseum.ca/home/">Virtual Museum of Canada</a></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td><a href="http://www.cannor.gc.ca/eng/1351104567432/1351104589057">Canadian Northern Economic Development Agency</a></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td><a href="http://www.elections.ca/content.aspx?section=abo&amp;dir=ceo&amp;document=index&amp;lang=e">Chief Electoral Officer (Office of the)</a></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td><a href="http://www.cic.gc.ca/english/department/index.asp?_ga=1.44417891.610614336.1412101472">Immigration, Refugees and Citizenship Canada</a></td>
+		<td>IRCC</td>
+	</tr>
+	<tr>
+		<td><a href="http://www.crr.ca/index.php?lang=english">Canadian Race Relations Foundation</a></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td><a href="https://www.canada.ca/en/immigration-refugee.html">Immigration and Refugee Board of Canada</a></td>
+		<td>IRB</td>
+	</tr>
+	<tr>
+		<td><a href="http://www.passport.gc.ca/index.aspx?lang=eng">Passport Canada</a></td>
+		<td>PPTC</td>
+	</tr>
+	<tr>
+		<td><a href="http://ciec-ccie.parl.gc.ca/EN/Pages/default.aspx">Conflict of Interest and Ethics Commissioner (Office of the)</a></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td><a href="http://www.elections.ca/home.aspx">Elections Canada</a></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td><a href="http://www.esdc.gc.ca/en/esdc/index.page">Employment and Social Development Canada</a></td>
+		<td>ESDC</td>
+	</tr>
+	<tr>
+		<td><a href="http://www.esdc.gc.ca/en/ei/commission.page">Canada Employment Insurance Commission</a></td>
+		<td>CEIC</td>
+	</tr>
+	<tr>
+		<td><a href="http://www.cirb-ccri.gc.ca/eic/site/047.nsf/eng/home">Canada Industrial Relations Board</a></td>
+		<td>CIRB</td>
+	</tr>
+	<tr>
+		<td><a href="http://www.cmhc-schl.gc.ca/en/index.cfm">Canada Mortgage and Housing Corporation</a></td>
+		<td>CMHC</td>
+	</tr>
+	<tr>
+		<td><a href="http://www.ccohs.ca/">Canadian Centre for Occupational Health and Safety</a></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td><a href="http://www.labour.gc.ca/eng/home.shtml">Labour Program</a></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td><a href="http://www.seniorscouncil.gc.ca/eng/home.shtml">National Seniors Council</a></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td><a href="http://www.ohstc.gc.ca/eng/home.shtml">Occupational Health and Safety Tribunal Canada</a></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td><a href="http://www.seniors.gc.ca/eng/index.shtml">Seniors</a></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td><a href="http://www.servicecanada.gc.ca/eng/home.shtml">Service Canada</a></td>
+		<td>ServCan</td>
+	</tr>
+	<tr>
+		<td><a href="http://www1.canada.ca/en/sst/">Social Security Tribunal of Canada</a></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td><a href="https://www.canada.ca/en/environment-climate-change.html">Environment and Climate Change Canada</a></td>
+		<td>ECCC</td>
+	</tr>
+	<tr>
+		<td><a href="http://www.ec.gc.ca/inre-nwri/default.asp?lang=En">Canada Centre for Inland Waters</a></td>
+		<td>CCIW</td>
+	</tr>
+	<tr>
+		<td><a href="https://www.canada.ca/en/environmental-assessment-agency.html">Canadian Environmental Assessment Agency</a></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td><a href="http://www.eprc-rpec.gc.ca/eic/site/eprc-rpec.nsf/eng/Home">Environmental Protection Review Canada</a></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td><a href="https://www.canada.ca/en/parks-canada.html">Parks Canada</a></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td><a href="https://www.canada.ca/en/department-finance.html">Finance Canada (Department of)</a></td>
+		<td>FIN</td>
+	</tr>
+	<tr>
+		<td><a href="http://www.oag-bvg.gc.ca/internet/English/admin_e_41.html">Auditor General of Canada (Office of the)</a></td>
+		<td>OAG</td>
+	</tr>
+	<tr>
+		<td><a href="http://www.bankofcanada.ca/">Bank of Canada</a></td>
+		<td>BOC</td>
+	</tr>
+	<tr>
+		<td><a href="http://www.cdic.ca/Pages/default.aspx">Canada Deposit Insurance Corporation</a></td>
+		<td>CDIC</td>
+	</tr>
+	<tr>
+		<td><a href="http://www.cdiccei.ca/en/">Canada Development Investment Corporation</a></td>
+		<td>CDEV</td>
+	</tr>
+	<tr>
+		<td><a href="http://www.cppib.com/en/home.html">Canada Pension Plan Investment Board</a></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td><a href="http://www.citt.gc.ca/">Canadian International Trade Tribunal</a></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td><a href="https://www.canada.ca/en/financial-consumer-agency.html">Financial Consumer Agency of Canada</a></td>
+		<td>FCAC</td>
+	</tr>
+	<tr>
+		<td><a href="https://www.canada.ca/en/financial-transactions-reports-analysis.html">Financial Transactions and Reports Analysis Centre of Canada</a></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td><a href="http://www.p3canada.ca/home.php">PPP Canada</a></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td><a href="http://www.mint.ca/store/template/home.jsp">Royal Canadian Mint</a></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td><a href="https://www.canada.ca/en/superintendent-financial-institutions.html">Superintendent of Financial Institutions Canada (Office of the)</a></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td><a href="https://www.canada.ca/en/fisheries-oceans.html">Fisheries and Oceans Canada</a></td>
+		<td>DFO</td>
+	</tr>
+	<tr>
+		<td><a href="https://www.canada.ca/en/canadian-coast-guard.html">Canadian Coast Guard</a></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td><a href="http://www.freshwaterfish.com/">Freshwater Fish Marketing Corporation</a></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td><a href="http://www.international.gc.ca/gac-amc/index.aspx?lang=eng">Global Affairs Canada</a></td>
+		<td>GAC</td>
+	</tr>
+	<tr>
+		<td><a href="http://www.ccc.ca/en">Canadian Commercial Corporation</a></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td><a href="http://www.tradecommissioner.gc.ca/eng/home.jsp">Canadian Trade Commissioner Service</a></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td><a href="http://www.edc.ca/EN/Pages/default.aspx">Export Development Canada</a></td>
+		<td>EDC</td>
+	</tr>
+	<tr>
+		<td><a href="http://www.idrc.ca/EN/Pages/default.aspx">International Development Research Centre</a></td>
+		<td>IDRC</td>
+	</tr>
+	<tr>
+		<td><a href="http://www.ncc-ccn.gc.ca/">National Capital Commission</a></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td><a href="http://www.gg.ca/index.aspx?lan=eng">Governor General of Canada</a></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td><a href="http://www.healthycanadians.gc.ca/department-ministere/hc-sc-eng.php?utm_source=depart_agen-depart-minist&amp;utm_medium=link&amp;utm_content=en-hc&amp;utm_campaign=canada.ca&amp;_ga=1.36120679.610614336.1412101472">Health Canada</a></td>
+		<td>HC</td>
+	</tr>
+	<tr>
+		<td><a href="https://www.canada.ca/en/food-inspection-agency.html">Canadian Food Inspection Agency</a></td>
+		<td>CFIA</td>
+	</tr>
+	<tr>
+		<td><a href="https://www.canada.ca/en/institutes-health-research.html">Canadian Institutes of Health Research</a></td>
+		<td>CIHR</td>
+	</tr>
+	<tr>
+		<td><a href="https://www.canada.ca/en/patented-medicine-prices-review.html">Patented Medicine Prices Review Board Canada</a></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td><a href="http://www.healthycanadians.gc.ca/department-ministere/phac-aspc-eng.php?utm_source=depart_agen-depart-minist&amp;utm_medium=link&amp;utm_content=en-phac&amp;utm_campaign=canada.ca&amp;_ga=1.15664241.610614336.1412101472">Public Health Agency of Canada</a></td>
+		<td>PHAC</td>
+	</tr>
+	<tr>
+		<td><a href="https://www.canada.ca/en/indigenous-northern-affairs.html">Indigenous and Northern Affairs Canada</a></td>
+		<td>INAC</td>
+	</tr>
+	<tr>
+		<td><a href="https://www.aadnc-aandc.gc.ca/eng/1375201178602/1375202816581">Aboriginal Business Canada</a></td>
+		<td>ABC</td>
+	</tr>
+	<tr>
+		<td><a href="http://www.pgic-iogc.gc.ca/eng/1100110010002/1100110010005">Indian Oil and Gas Canada</a></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td><a href="http://www.trc.ca/websites/trcinstitution/index.php?p=3">Indian Residential Schools Truth and Reconciliation Commission</a></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td><a href="https://www.canada.ca/en/polar-knowledge.html">Polar Knowledge Canada</a></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td><a href="http://www.sct-trp.ca/hom/index_e.htm">Registry of the Specific Claims Tribunal of Canada</a></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td><a href="https://www.canada.ca/en/innovation-science-economic-development.html">Innovation, Science and Economic Development Canada</a></td>
+		<td>ISED</td>
+	</tr>
+	<tr>
+		<td><a href="http://www.bdc.ca/EN/Pages/home.aspx">Business Development Bank of Canada</a></td>
+		<td>BDC</td>
+	</tr>
+	<tr>
+		<td><a href="http://www.chairs-chaires.gc.ca/home-accueil-eng.aspx">Canada Research Chairs</a></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td><a href="http://www.cipo.ic.gc.ca/eic/site/cipointernet-internetopic.nsf/eng/home">Canadian Intellectual Property Office</a></td>
+		<td>CIPO</td>
+	</tr>
+	<tr>
+		<td><a href="https://www.canada.ca/en/space-agency.html">Canadian Space Agency</a></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td><a href="http://en-corporate.canada.travel/">Canadian Tourism Commission</a></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td><a href="http://www.crc.gc.ca/eic/site/069.nsf/eng/home">Communications Research Centre Canada</a></td>
+		<td>CRC</td>
+	</tr>
+	<tr>
+		<td><a href="http://www.competitionbureau.gc.ca/eic/site/cb-bc.nsf/eng/home">Competition Bureau Canada</a></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td><a href="http://www.ct-tc.gc.ca/Home.asp">Competition Tribunal</a></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td><a href="http://www.cb-cda.gc.ca/home-accueil-e.html">Copyright Board Canada</a></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td><a href="http://www.bankofcanadamuseum.ca/">Currency Museum</a></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td><a href="https://www.canada.ca/en/economic-development-southern-ontario.html">Federal Economic Development Agency for Southern Ontario</a></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td><a href="http://fednor.gc.ca/eic/site/fednor-fednor.nsf/eng/Home">Federal Economic Development Initiative for Northern Ontario (FedNor)</a></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td><a href="https://www.ic.gc.ca/eic/site/ito-oti.nsf/eng/Home">Industrial Technologies Office</a></td>
+		<td>ITO</td>
+	</tr>
+	<tr>
+		<td><a href="http://www.ic.gc.ca/eic/site/mc-mc.nsf/eng/Home">Measurement Canada</a></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td><a href="https://www.canada.ca/en/national-research-council.html">National Research Council Canada</a></td>
+		<td>NRC</td>
+	</tr>
+	<tr>
+		<td><a href="https://www.canada.ca/en/science-engineering-research.html">Natural Sciences and Engineering Research Canada</a></td>
+		<td>NSERC</td>
+	</tr>
+	<tr>
+		<td><a href="https://www.canada.ca/en/social-sciences-humanities-research.html">Social Sciences and Humanities Research Council of Canada</a></td>
+		<td>SSHRC</td>
+	</tr>
+	<tr>
+		<td><a href="http://www.scc.ca/en">Standards Council of Canada</a></td>
+		<td>STC</td>
+	</tr>
+	<tr>
+		<td><a href="https://www.canada.ca/en/statistics-canada.html">Statistics Canada</a></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td><a href="http://www.ic.gc.ca/eic/site/bsf-osb.nsf/eng/home">Superintendent of Bankruptcy Canada (Office of the)</a></td>
+		<td>OSB</td>
+	</tr>
+	<tr>
+		<td><a href="https://www.canada.ca/en/department-justice.html">Justice Canada (Department of)</a></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td><a href="https://www.canada.ca/en/administrative-tribunals-support-service.html">Administrative Tribunals Support Service of Canada</a></td>
+		<td>ATSSC</td>
+	</tr>
+	<tr>
+		<td><a href="https://www.canada.ca/en/human-rights-commission.html">Canadian Human Rights Commission</a></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td><a href="http://www.cjc-ccm.gc.ca/english/index_en.asp">Canadian Judicial Council</a></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td><a href="http://www.fja.gc.ca/home-accueil/index-eng.html">Commissioner for Federal Judicial Affairs Canada (Office of the)</a></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td><a href="http://cas-ncr-nter03.cas-satj.gc.ca/portal/page/portal/CAS/">Courts Administration Service</a></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td><a href="http://cas-ncr-nter03.cas-satj.gc.ca/portal/page/portal/fca-caf_eng">Federal Court of Appeal</a></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td><a href="http://cas-ncr-nter03.cas-satj.gc.ca/portal/page/portal/fc_cf_en/Index">Federal Court of Canada</a></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td><a href="http://www.victimsfirst.gc.ca/index.html">Federal Ombudsman for Victims Of Crime (Office of the)</a></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td><a href="http://www.chrt-tcdp.gc.ca/NS/index-eng.asp">Human Rights Tribunal of Canada</a></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td><a href="http://www.oic-ci.gc.ca/eng/">Information Commissioner (Office of the)</a></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td><a href="http://www.priv.gc.ca/index_e.asp">Privacy Commissioner (Office of the)</a></td>
+		<td>PCO</td>
+	</tr>
+	<tr>
+		<td><a href="http://www.ppsc-sppc.gc.ca/eng/index.html">Public Prosecution Service of Canada</a></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td><a href="http://www.scc-csc.gc.ca/home-accueil/index-eng.aspx">Supreme Court of Canada</a></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td><a href="http://cas-ncr-nter03.cas-satj.gc.ca/portal/page/portal/tcc-cci_Eng/Index">Tax Court of Canada</a></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td><a href="http://www.lgc.gc.ca/eng">Leader of the Government in the House of Commons</a></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td><a href="https://www.canada.ca/en/department-national-defence.html">National Defence</a></td>
+		<td>DND</td>
+	</tr>
+	<tr>
+		<td><a href="http://www.army-armee.forces.gc.ca/en/index.page">Canadian Army</a></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td><a href="http://www.cadets.ca/en/">Canadian Cadet Organizations</a></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td><a href="http://www.cfha-alfc.forces.gc.ca/">Canadian Forces Housing Agency</a></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td><a href="https://www.canada.ca/en/communications-security.html">Communications Security Establishment Canada</a></td>
+		<td>CSEC</td>
+	</tr>
+	<tr>
+		<td><a href="https://www.canada.ca/en/office-communications-security-establishment-commissioner.html">Communications Security Establishment Commissioner (Office of the)</a></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td><a href="http://www.drdc-rddc.gc.ca/en/">Defence Research and Development Canada</a></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td><a href="https://www.canada.ca/en/military-grievances-external-review.html">Military Grievances External Review Committee</a></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td><a href="https://www.canada.ca/en/military-police-complaints.html">Military Police Complaints Commission of Canada</a></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td><a href="http://www.ombudsman.forces.gc.ca/en/">National Defence and the Canadian Forces Ombudsperson (Office of the)</a></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td><a href="http://www.nss.gc.ca/">National Search and Rescue Secretariat</a></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td><a href="http://www.rcaf-arc.forces.gc.ca/en/index.page">Royal Canadian Air Force</a></td>
+		<td>RCA</td>
+	</tr>
+	<tr>
+		<td><a href="http://www.navy-marine.forces.gc.ca/en/index.page">Royal Canadian Navy</a></td>
+		<td>RCN</td>
+	</tr>
+	<tr>
+		<td><a href="http://www.rmc.ca/index-eng.php">Royal Military College of Canada</a></td>
+		<td>RMC</td>
+	</tr>
+	<tr>
+		<td><a href="https://www.canada.ca/en/natural-resources-canada.html">Natural Resources Canada</a></td>
+		<td>NRC</td>
+	</tr>
+	<tr>
+		<td><a href="http://www.aecl.ca/en/home/default.aspx">Atomic Energy of Canada Limited</a></td>
+		<td>AECL</td>
+	</tr>
+	<tr>
+		<td><a href="http://www.nuclearsafety.gc.ca/eng/">Canadian Nuclear Safety Commission</a></td>
+		<td>CNSC</td>
+	</tr>
+	<tr>
+		<td><a href="http://www.nrcan.gc.ca/earth-sciences/geography/place-names/about-geographical-names-board-canada/9174">Geographical Names Board of Canada</a></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td><a href="http://www.nrcan.gc.ca/earth-sciences/geomatics/10776">Geomatics Canada</a></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td><a href="https://www.canada.ca/en/national-energy-board.html">National Energy Board</a></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td><a href="https://www.canada.ca/en/northern-pipeline-agency.html">Northern Pipeline Agency Canada</a></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td><a href="http://www.parl.gc.ca/Default.aspx?Language=E">Parliament of Canada</a></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td><a href="http://pm.gc.ca/eng">Prime Minister of Canada</a></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td><a href="https://www.canada.ca/en/privy-council.html">Privy Council Office</a></td>
+		<td>PCO</td>
+	</tr>
+	<tr>
+		<td><a href="http://www.scics.gc.ca/english/view.asp?x=1">Canadian Intergovernmental Conference Secretariat</a></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td><a href="http://www.clerk.gc.ca/eng/index.asp">Clerk of the Privy Council</a></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td><a href="http://www.ocol-clo.gc.ca/html/index_e.php">Commissioner of Official Languages (Office of the)</a></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td><a href="http://www.democraticinstitutions.gc.ca/">Democratic Institutions</a></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td><a href="https://www.canada.ca/en/office-infrastructure.html">Infrastructure Canada</a></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td><a href="http://www.pco-bcp.gc.ca/aia/index.asp?lang=eng">Intergovernmental Affairs (Department of)</a></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td><a href="https://www.canada.ca/en/public-safety-canada.html">Public Safety Canada</a></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td><a href="http://www.cbsa-asfc.gc.ca/menu-eng.html">Canada Border Services Agency</a></td>
+		<td>CBSA</td>
+	</tr>
+	<tr>
+		<td><a href="http://www.rcmp-grc.gc.ca/cfp-pcaf/index-eng.htm">Canada Firearms Centre</a></td>
+		<td>CAFC</td>
+	</tr>
+	<tr>
+		<td><a href="http://www.cpc-ccp.gc.ca/en/node/317">Canadian Police College</a></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td><a href="https://www.csis-scrs.gc.ca/index-en.php">Canadian Security Intelligence Service</a></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td><a href="https://www.canada.ca/en/civilian-review-complaints-rcmp.html">Civilian Review and Complaints Commission for the RCMP</a></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td><a href="http://www.csc-scc.gc.ca/corcan/index-eng.shtml">CORCAN</a></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td><a href="http://www.oci-bec.gc.ca/index-eng.aspx">Correctional Investigator Canada</a></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td><a href="https://www.canada.ca/en/correctional-service.html">Correctional Service Canada</a></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td><a href="https://www.canada.ca/en/parole-board.html">Parole Board of Canada</a></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td><a href="http://www.rcmp-grc.gc.ca/index-eng.htm">Royal Canadian Mounted Police</a></td>
+		<td>RCMP</td>
+	</tr>
+	<tr>
+		<td><a href="https://www.canada.ca/en/rcmp-external-review-committee.html">Royal Canadian Mounted Police External Review Committee</a></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td><a href="https://www.canada.ca/en/public-services-procurement.html">Public Services and Procurement Canada</a></td>
+		<td>PSPC</td>
+	</tr>
+	<tr>
+		<td><a href="http://www.gazette.gc.ca/gazette/home-accueil-eng.php">Canada Gazette</a></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td><a href="http://www.clc.ca/home">Canada Lands Company Limited</a></td>
+		<td>CLCL</td>
+	</tr>
+	<tr>
+		<td><a href="http://www.tpsgc-pwgsc.gc.ca/ongc-cgsb/index-eng.html">Canadian General Standards Board</a></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td><a href="http://www.dcc-cdc.gc.ca/english/index.html">Defence Construction Canada</a></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td><a href="https://www.canada.ca/en/procurement-ombudsman.html">Procurement Ombudsman (Office of the)</a></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td><a href="http://www.tpsgc-pwgsc.gc.ca/recgen/txt/index-eng.html">Receiver General for Canada</a></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td><a href="https://www.canada.ca/en/shared-services.html">Shared Services Canada</a></td>
+		<td>SSC</td>
+	</tr>
+	<tr>
+		<td><a href="http://www.bt-tb.tpsgc-pwgsc.gc.ca/btb.php?lang=eng&amp;cont=001">Translation Bureau</a></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td><a href="http://www.gg.ca/document.aspx?id=12&amp;wb48617274=D26312C3">Secretary to the Governor General (Office of the)</a></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td><a href="http://www.sirc-csars.gc.ca/index-eng.html">Security Intelligence Review Committee</a></td>
+		<td>SIRC</td>
+	</tr>
+	<tr>
+		<td><a href="https://www.canada.ca/en/transport-canada.html">Transport Canada</a></td>
+		<td>TC</td>
+	</tr>
+	<tr>
+		<td><a href="http://www.atlanticpilotage.com/eng/index.html">Atlantic Pilotage Authority Canada</a></td>
+		<td>APA</td>
+	</tr>
+	<tr>
+		<td><a href="http://www.canadapost.ca/cpo/mc/default.jsf?LOCALE=en">Canada Post</a></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td><a href="http://www.catsa.gc.ca/">Canadian Air Transport Security Authority</a></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td><a href="https://www.canada.ca/en/transportation-agency.html">Canadian Transportation Agency</a></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td><a href="http://www.pontscanadabridges.ca/en/">Federal Bridge Corporation</a></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td><a href="http://www.glpa-apgl.com/homePage_e.asp">Great Lakes Pilotage Authority Canada</a></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td><a href="http://jccbi.ca/">Jacques Cartier and Champlain Bridges Inc.</a></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td><a href="http://www.pilotagestlaurent.gc.ca/homePage_e.asp">Laurentian Pilotage Authority Canada</a></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td><a href="http://www.marine-atlantic.ca/">Marine Atlantic</a></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td><a href="http://www.ppa.gc.ca/text/index-e.html">Pacific Pilotage Authority Canada</a></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td><a href="http://www.rti.ca/">Ridley Terminals Inc.</a></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td><a href="http://www.ssopfund.ca/home">Ship-Source Oil Pollution Fund</a></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td><a href="http://www.tatc.gc.ca/index.php">Transportation Appeal Tribunal of Canada</a></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td><a href="http://www.viarail.ca/en">VIA Rail Canada Inc.</a></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td><a href="https://www.canada.ca/en/transportation-safety-board.html">Transportation Safety Board of Canada</a></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td><a href="https://www.canada.ca/en/treasury-board-secretariat.html">Treasury Board of Canada Secretariat</a></td>
+		<td>TBS</td>
+	</tr>
+	<tr>
+		<td><a href="https://www.canada.ca/en/school-public-service.html">Canada School of Public Service</a></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td><a href="http://ocl-cal.gc.ca/eic/site/012.nsf/eng/home">Commissioner of Lobbying of Canada (Office of the)</a></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td><a href="http://www.psic.gc.ca/eng">Public Sector Integrity Commissioner of Canada (Office of the)</a></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td><a href="http://www.investpsp.ca/en/index.html">Public Sector Pension Investment Board</a></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td><a href="https://www.canada.ca/en/veterans-affairs-canada.html">Veterans Affairs Canada</a></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td><a href="http://www.ombudsman-veterans.gc.ca/eng">Veterans' Ombudsman (Office of the)</a></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td><a href="https://www.canada.ca/en/veterans-review-appeal-board.html">Veterans Review and Appeal Board Canada</a></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td><a href="https://www.canada.ca/en/western-economic-diversification.html">Western Economic Diversification Canada</a></td>
+		<td></td>
+	</tr>
+</tbody>
+</table>
+<dl id="wb-dtmd">
+<dt>Date modified: </dt>
+<dd><time property="dateModified">2016-05-10</time></dd>
+</dl>
+</main>
+<aside class="gc-nttvs container">
+    <h2>Government of Canada activities and initiatives</h2>
+    <div id="gcwb_prts" class="wb-eqht row" data-ajax-replace="//cdn.canada.ca/gcweb-cdn-live/features/features-en.html">
+        <p class="mrgn-lft-md"><a href="http://www.canada.ca/activities.html">Access Government of Canada activities and initiatives</a></p>
+    </div>
+</aside>
+<footer role="contentinfo" id="wb-info">
+<nav role="navigation" class="container visible-sm visible-md visible-lg wb-navcurr">
+<h2 class="wb-inv">About this site</h2>
+<div class="row">
+<div class="col-sm-3 col-lg-3">
+<section>
+<h3>Contact information</h3>
+<ul class="list-unstyled">
+<li><a href="#">Link 1</a></li>
+<li><a href="#">Link 2</a></li>
+<li><a href="#">Link 3</a></li>
+</ul>
+</section>
+<section>
+<h3>News</h3>
+<ul class="list-unstyled">
+<li><a href="http://news.gc.ca/web/index-en.do">Newsroom</a></li>
+<li><a href="http://news.gc.ca/web/nwsprdct-en.do?mthd=tp&amp;crtr.tp1D=1">News releases</a></li>
+<li><a href="http://news.gc.ca/web/nwsprdct-en.do?mthd=tp&amp;crtr.tp1D=3">Media advisories</a></li>
+<li><a href="http://news.gc.ca/web/nwsprdct-en.do?mthd=tp&amp;crtr.tp1D=970">Speeches</a></li>
+<li><a href="http://news.gc.ca/web/nwsprdct-en.do?mthd=tp&amp;crtr.tp1D=980">Statements</a></li>
+</ul>
+</section>
+</div>
+<section class="col-sm-3 col-lg-3">
+<h3>Government</h3>
+<ul class="list-unstyled">
+<li><a href="http://www.canada.ca/en/gov/system">How government works</a></li>
+<li><a href="http://www.canada.ca/en/gov/dept">Departments and agencies</a></li>
+<li><a href="http://pm.gc.ca/eng">Prime Minister</a></li>
+<li><a href="http://www.canada.ca/en/gov/ministers">Ministers</a></li>
+<li><a href="http://www.canada.ca/en/gov/publicservice">Public service and military</a></li>
+<li><a href="http://www.canada.ca/en/gov/policy">Policies, regulations and laws</a></li>
+<li><a href="http://www.canada.ca/en/gov/libraries">Libraries</a></li>
+<li><a href="http://www.canada.ca/en/gov/publications">Publications</a></li>
+<li><a href="http://www.canada.ca/en/gov/statistics">Statistics and data</a></li>
+<li><a href="http://www.canada.ca/en/newsite.html">About Canada.ca</a></li>
+</ul>
+</section>
+<section class="col-sm-3 col-lg-3 brdr-lft">
+<h3>Transparency</h3>
+<ul class="list-unstyled">
+<li><a href="http://www.canada.ca/en/transparency/reporting.html">Government-wide reporting</a></li>
+<li><a href="http://open.canada.ca/en">Open government</a></li>
+<li><a href="http://www.canada.ca/en/transparency/disclosure.html">Proactive disclosure</a></li>
+<li><a href="http://www.canada.ca/en/transparency/terms.html">Terms and conditions</a></li>
+<li><a href="http://www.canada.ca/en/transparency/privacy.html">Privacy</a></li>
+</ul>
+</section>
+<div class="col-sm-3 col-lg-3 brdr-lft">
+<section>
+<h3>Feedback</h3>
+<p><a href="http://www.canada.ca/en/contact/feedback.html"><img src="./lib/GCWeb/assets/feedback.png" alt="Feedback about this Web site"></a></p>
+</section>
+<section>
+<h3>Social media</h3>
+<p><a href="http://www.canada.ca/en/social"><img src="./lib/GCWeb/assets/social.png" alt="Social media"></a></p>
+</section>
+<section>
+<h3>Mobile centre</h3>
+<p><a href="http://www.canada.ca/en/mobile"><img src="./lib/GCWeb/assets/mobile.png" alt="Mobile centre"></a></p>
+</section>
+</div>
+</div>
+</nav>
+<div class="brand">
+<div class="container">
+<div class="row">
+<div class="col-xs-6 visible-sm visible-xs tofpg">
+<a href="#wb-cont">Top of Page <span class="glyphicon glyphicon-chevron-up"></span></a>
+</div>
+<div class="col-xs-6 col-md-12 text-right">
+<object type="image/svg+xml" tabindex="-1" role="img" data="./lib/GCWeb/assets/wmms-blk.svg" aria-label="Symbol of the Government of Canada"></object>
+</div>
+</div>
+</div>
+</div>
+</footer>
+<!--[if gte IE 9 | !IE ]><!-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="./lib/wet-boew/js/wet-boew.min.js"></script>
+<!--<![endif]-->
+<!--[if lt IE 9]>
+<script src="./lib/wet-boew/js/ie8-wet-boew2.min.js"></script>
+
+<![endif]-->
+</body>
+</html>
