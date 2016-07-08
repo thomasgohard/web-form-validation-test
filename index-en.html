@@ -132,8 +132,8 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 			<fieldset>
 				<legend>Your system</legend>
 				<div class="form-group">
-					<label for="browser1"><span class="field-name">In which browser are you viewing this form?</span></label>
-					<select class="form-control" id="browser1" name="browser1">
+					<label for="browser1" class="required"><span class="field-name">In which browser are you viewing this form?</span><strong class="required">(required)</strong></label>
+					<select class="form-control" id="browser1" name="browser1" required="required">
 						<option label="Select a browser"></option>
 						<option value="Chrome">Google Chrome</option>
 						<option value="IE">Internet Explorer</option>
@@ -143,7 +143,7 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 					</select>
 				</div>
 				<div class="form-group">
-					<label for="bversion"><span class="field-name">Browser version number or type of phone:</span> </label>
+					<label for="bversion" class="required"><span class="field-name">Browser version number or type of phone:</span><strong class="required">(required)</strong></label>
 					<p><a href="#right-panel-version" aria-controls="right-panel-version" class="overlay-lnk" role="button">How to find browser version number</a></p>
 					<section id="right-panel-version" class="wb-overlay modal-content overlay-def wb-panel-r" style="max-width:60%;">	
 						<header class="modal-header">
@@ -165,7 +165,7 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
         						<button class="btn btn-primary" type="button" onClick="$( '.wb-overlay' ).trigger( 'close.wb-overlay' );">Close</button>
 						</div>
 					</section>
-					<input class="form-control" id="bversion" name="bversion" type="text" aria-describedby="bversion">
+					<input class="form-control" id="bversion" name="bversion" type="text" aria-describedby="bversion" required="required">
 				</div>
 				<div class="form-group">
 					<label for="scversion"><span class="field-name">Assistive software name and version (optional)</span> </label>
