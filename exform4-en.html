@@ -129,7 +129,7 @@ input[list]::-webkit-calendar-picker-indicator {
 	<div class="wb-frmvld">
 		<form action="./done-en.html" method="get" id="validation-example" novalidate>
 			<fieldset class="form-group">
-				<legend>Mailing address</legend>
+				<legend class="required">Mailing address<strong class="required">(required)</strong></legend>
 				<!-- Remove autocomplete for now 
 				<p id="country-desc">Start typing the name of the country, then select from the list.</p>
 				<label for="country2" ><span class="field-name">Country</span></label>
@@ -370,16 +370,16 @@ input[list]::-webkit-calendar-picker-indicator {
 			</fieldset>
 			-->
 				<div class="form-group">
-					<label for="st-address" ><span class="field-name">Street address</span></label>
-					<input class="form-control" id="st-address" name="st-address" size="35" autocomplete="shipping street-address"/>
+					<label for="st-address" class="required"><span class="field-name">Street address</span></label>
+					<input class="form-control" id="st-address" name="st-address" size="35" autocomplete="shipping street-address" required="required"/>
 				</div>
 				<div class="form-group">
-					<label for="frmCity" ><span class="field-name">City</span></label>
-					<input class="form-control" id="frmCity" name="frmCity" autocomplete="shipping locality"/>
+					<label for="frmCity" class="required"><span class="field-name">City</span></label>
+					<input class="form-control" id="frmCity" name="frmCity" autocomplete="shipping locality" required="required"/>
 				</div>
 				<div class="form-group">
-					<label for="frmProvince"><span class="field-name">Province</span></label>
-					<select class="form-control" id="frmProvince" name="frmProvince">
+					<label for="frmProvince" class="required"><span class="field-name">Province</span></label>
+					<select class="form-control" id="frmProvince" name="frmProvince" required="required">
 						<option label="Select a Province"></option>
 						<option value="Alberta">Alberta</option>
 						<option value="British Columbia">British Columbia</option>
@@ -397,8 +397,8 @@ input[list]::-webkit-calendar-picker-indicator {
 					</select>
 				</div>
 				<div class="form-group">
-					<label for="pcodeca"><span class="field-name">Postal code</span></label>
-					<input class="form-control" id="pcodeca" name="pcodeca" data-rule-postalCodeCA="true" type="text" size="7" maxlength="7" />
+					<label for="pcodeca" class="required"><span class="field-name">Postal code</span></label>
+					<input class="form-control" id="pcodeca" name="pcodeca" data-rule-postalCodeCA="true" type="text" size="7" maxlength="7" required="required"/>
 				</div>
 			</fieldset>
 			<!--Turn off attaching a file question
