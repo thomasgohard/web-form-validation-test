@@ -129,15 +129,15 @@ input[list]::-webkit-calendar-picker-indicator {
 	<div class="wb-frmvld">
 		<form action="./exform4-en.html" method="get" id="validation-example" novalidate>
 			<fieldset class="form-group">
-				<legend>What is your date of birth?</legend>
+				<legend class="required">What is your date of birth?<strong class="required">(required)</strong></legend>
 				<div class="form-inline dob-picker">
 					<div class="form-group">
-						<label for="dob2yy"><span class="field-name">Year</span> (YYYY)</label>
-						<input class="form-control" id="dob2yy" name="dob2yy" type="text" size=4 pattern="[0-9]{4}" aria-describedby="dob-desc">
+						<label for="dob2yy" class="required"><span class="field-name">Year</span> (YYYY)<strong class="required">(required)</strong></label>
+						<input class="form-control" id="dob2yy" name="dob2yy" type="text" size=4 pattern="[0-9]{4}" aria-describedby="dob-desc" required="required">
 					</div>
 					<div class="form-group">
-						<label for="dob2mm"><span class="field-name">Month</span></label>
-						<select class="form-control" id="dob2mm" name="dob2mm">
+						<label for="dob2mm" class="required"><span class="field-name">Month</span><strong class="required">(required)</strong></label>
+						<select class="form-control" id="dob2mm" name="dob2mm" required="required">
 							<option label="Month"></option>
 							<option value='01'>January</option>
 							<option value='02'>February</option>
@@ -154,8 +154,8 @@ input[list]::-webkit-calendar-picker-indicator {
 						</select>
 					</div>
 					<div class="form-group">
-						<label for="dob2dd"><span class="field-name">Day</span></label>
-						<select class="form-control" id="dob2dd" name="dob2dd">
+						<label for="dob2dd" class="required"><span class="field-name">Day</span><strong class="required">(required)</strong></label>
+						<select class="form-control" id="dob2dd" name="dob2dd" required="required">
 							<option label="Day"></option>
 							<option value='01'>01</option>
 							<option value='02'>02</option>
@@ -224,7 +224,7 @@ input[list]::-webkit-calendar-picker-indicator {
 					<label for="status4"><input type="radio" name="status" value="4" id="status4" />&#160;&#160;Other</label>
 			</fieldset>
 			<fieldset>
-			<legend class="field-name" id="ast-dec">Which devices do you use to visit websites (check all that apply): </legend>
+			<legend class="field-name required" id="ast-dec">Which devices do you use to visit websites (check all that apply):<strong class="required">(required)</strong></legend>
 				<div class="checkbox">
 					<label for="technology1"><input type="checkbox" name="phone" value="1" id="technology1" />&#160;&#160;smart phone</label>
 				</div>
