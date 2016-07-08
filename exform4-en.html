@@ -130,11 +130,11 @@ input[list]::-webkit-calendar-picker-indicator {
 		<form action="./done-en.html" method="get" id="validation-example" novalidate>
 			<fieldset class="form-group">
 				<legend>Mailing address</legend>
+				<!-- Remove autocomplete for now 
 				<p id="country-desc">Start typing the name of the country, then select from the list.</p>
 				<label for="country2" ><span class="field-name">Country</span></label>
 				<input class="form-control" type="text" id="country2" name="country2" list="suggestions" placeholder="Start typing..." ariadescribedby="country-desc" />
 				<datalist id="suggestions">
-					<!--[if lte IE 9]><select><![endif]-->
 					<option label="afghanistan" value="Afghanistan"</option>
 					<option label="albania" value="Albania"</option>
 					<option label="algeria" value="Algeria"</option>
@@ -366,10 +366,9 @@ input[list]::-webkit-calendar-picker-indicator {
 					<option label="yemen" value="Yemen"></option>
 					<option label="zambia" value="Zambia"></option>
 					<option label="zimbabwe" value="Zimbabwe"></option>
-					<!--[if lte IE 9]></select><![endif]-->
 				</datalist>
 			</fieldset>
-			<fieldset>
+			-->
 				<div class="form-group">
 					<label for="st-address" ><span class="field-name">Street address</span></label>
 					<input class="form-control" id="st-address" name="st-address" size="35" autocomplete="shipping street-address"/>
@@ -402,11 +401,13 @@ input[list]::-webkit-calendar-picker-indicator {
 					<input class="form-control" id="pcodeca" name="pcodeca" data-rule-postalCodeCA="true" type="text" size="7" maxlength="7" />
 				</div>
 			</fieldset>
+			<!--Turn off attaching a file question
 			<fieldset class="form-group">
 				<label for="file1"><span class="field-name">Attach any file:</span></label>
 				<p id="attach-desc">We want to understand how people attach files to webforms. Attach then remove any photo or file.</p>
 				<input class="file1" name="file1" type="file" ariadescribedby="attach-desc" />
 			</fieldset>
+			-->
 			<!--
 			<fieldset class="form-group">
 				<label for="frmCityS" ><span class="field-name">City</span></label>
@@ -423,15 +424,9 @@ input[list]::-webkit-calendar-picker-indicator {
 	</div>
 	<dl id="wb-dtmd">
 		<dt>Date modified: </dt>
-		<dd><time property="dateModified">2015-01-28</time></dd>
+		<dd><time property="dateModified">2016-07-08</time></dd>
 	</dl>
 </main>
-<aside class="gc-nttvs container">
-    <h2>Government of Canada activities and initiatives</h2>
-    <div id="gcwb_prts" class="wb-eqht row" data-ajax-replace="//cdn.canada.ca/gcweb-cdn-live/features/features-en.html">
-        <p class="mrgn-lft-md"><a href="http://www.canada.ca/activities.html">Access Government of Canada activities and initiatives</a></p>
-    </div>
-</aside>
 <footer role="contentinfo" id="wb-info">
 <nav role="navigation" class="container visible-sm visible-md visible-lg wb-navcurr">
 <h2 class="wb-inv">About this site</h2>
