@@ -194,11 +194,28 @@ input[list]::-webkit-calendar-picker-indicator {
 			</fieldset>
 			<fieldset>
 				<legend class="required"><span class="field-name">Citizenship status</span> <strong class="required">(required)</strong></legend>
+				<p><a href="#right-panel-version" aria-controls="right-panel-version" class="overlay-lnk" role="button">Help with citizenship status</a></p>
+					<section id="right-panel-version" class="wb-overlay modal-content overlay-def wb-panel-r" style="max-width:60%;">	
+						<header class="modal-header">
+							<h2 class="modal-title">Help for choosing citizenship status</h2>
+						</header>
+						<div class="modal-body">
+							 <dl class="mrgn-bttm-lg">
+							 	<dt class="h3 mrgn-tp-md">Canadian Citizen</dt>
+							 	<dd>If you were born in Canada, a Canadian provincial or territorial birth certificate should be enough to prove Canadian citizenship. </dd>
+								<dt class="h3 mrgn-tp-md">Permanent Resident </dt>
+								<dd>A permanent resident is someone who has been given permanent resident status by immigrating to Canada, but is not a Canadian citizen. Permanent residents are citizens of other countries.</dd>
+							</dl>
+						</div>
+						<div class="modal-body">
+        						<button class="btn btn-primary" type="button" onClick="$( '.wb-overlay' ).trigger( 'close.wb-overlay' );">Close</button>
+						</div>
+					</section>
 				<div class="radio">
 					<label for="status1"><input type="radio" name="status" value="1" id="status1" required="required"/>&#160;&#160;Canadian citizen</label>
 				</div>
 				<div class="radio">
-					<label for="status2"><input type="radio" name="status" value="2" id="status2" />&#160;&#160;Permanent resident</label>
+					<label for="status2"><input type="radio" name="status" value="2" id="status2" />&#160;&#160;Permanent resident status</label>
 				</div>
 				<div class="radio">
 					<label for="status3"><input type="radio" name="status" value="3" id="status3" />&#160;&#160;Work permit</label>
@@ -236,15 +253,9 @@ input[list]::-webkit-calendar-picker-indicator {
 	</div>
 	<dl id="wb-dtmd">
 		<dt>Date modified: </dt>
-		<dd><time property="dateModified">2015-01-28</time></dd>
+		<dd><time property="dateModified">2016-07-08</time></dd>
 	</dl>
 </main>
-<aside class="gc-nttvs container">
-    <h2>Government of Canada activities and initiatives</h2>
-    <div id="gcwb_prts" class="wb-eqht row" data-ajax-replace="//cdn.canada.ca/gcweb-cdn-live/features/features-en.html">
-        <p class="mrgn-lft-md"><a href="http://www.canada.ca/activities.html">Access Government of Canada activities and initiatives</a></p>
-    </div>
-</aside>
 <footer role="contentinfo" id="wb-info">
 <nav role="navigation" class="container visible-sm visible-md visible-lg wb-navcurr">
 <h2 class="wb-inv">About this site</h2>
