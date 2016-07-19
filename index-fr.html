@@ -131,8 +131,8 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 			<fieldset>
 				<legend>Navigateur</legend>
 				<div class="form-group">
-					<label for="browser1"><span class="field-name">Quel navigateur utilisez-vous pour afficher ce formulaire?</span></label>
-					<select class="form-control" id="browser1" name="browser1">
+					<label for="browser1" class="required"><span class="field-name">Quel navigateur utilisez-vous pour afficher ce formulaire?</span><strong class="required">(obligatoire)</strong></label>
+					<select class="form-control" id="browser1" name="browser1" required="required">
 						<option label="Sélectionnez un navigateur"></option>
 						<option value="Chrome">Google Chrome</option>
 						<option value="IE">Internet Explorer</option>
@@ -142,7 +142,7 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 					</select>
 				</div>
 				<div class="form-group">
-					<label for="bversion"><span class="field-name">Numéro de version de votre navigateur ou le nom de votre téléphone :</span></label>
+					<label for="bversion" class="required"><span class="field-name">Numéro de version de votre navigateur ou le nom de votre téléphone :</span><strong class="required">(obligatoire)</strong></label>
 					<p><a href="#right-panel-version" aria-controls="right-panel-version" class="overlay-lnk" role="button">Comment trouver le numéro de version de votre navigateur</a></p>
 					<section id="right-panel-version" class="wb-overlay modal-content overlay-def wb-panel-r" style="max-width:60%;">	
 						<header class="modal-header">
@@ -165,7 +165,7 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
         							<button class="btn btn-primary" type="button" onClick="$( '.wb-overlay' ).trigger( 'close.wb-overlay' );">Close</button>
 							</div>
 					</section>
-					<input class="form-control" id="bversion" name="bversion" type="text" aria-describedby="bversion">
+					<input class="form-control" id="bversion" name="bversion" type="text" aria-describedby="bversion" required="required">
 				</div>
 				<div class="form-group">
 					<label for="scversion"><span class="field-name">Nom du logiciel d'assistance et de la version: (optionnel)</span> </label>
