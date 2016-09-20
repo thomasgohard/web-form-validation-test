@@ -127,10 +127,7 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 	<h1 id="wb-cont" property="name">Example Application Form 1</h1>
 	<p>This form is not connected to a server - the data aren't really being collected. It's just for test purposes.</p>
 	<div class="wb-frmvld">
-		<!-- skip the other form pages in this round of testing
 		<form action="./exform2-en.html" method="get" id="validation-example" novalidate>
-		-->
-		<form action="./done-en.html" method="get" id="validation-example" novalidate>
 			<fieldset>
 				<legend>Your system</legend>
 				<div class="form-group">
@@ -169,27 +166,6 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 					</section>
 					<input class="form-control" id="bversion" name="bversion" type="text" aria-describedby="bversion" required="required">
 				</div>
-				<div class="form-group">
-					<label for="scversion"><span class="field-name">Assistive software name and version (optional)</span> </label>
-					<p>If using assistive technology, like a screen reader or magnifier, enter the name and version number.</p>
-					<div id="scversion-desc"> 
-						<p><a href="#right-panel" aria-controls="right-panel" class="overlay-lnk" role="button">How to find Jaws/NVDA version</a></p>
-						<section id="right-panel" class="wb-overlay modal-content overlay-def wb-panel-r"style="max-width:60%;">
-							<header class="modal-header">
-								<h2 class="modal-title">Help with screen reader versions</h2>
-							</header>
-							<div class="modal-body">
-								<p>For JAWS, Press INSERT+J to make the JFW window active and then go to the menu bar. Choose the Help submenu and then the About option. </p>
-								<p>For NVIDIA, Right-click on your desktop and click NVIDIA Control Panel to open it. When the Welcome page opens, click on the Help menu and select Updates.</p>
-							</div>
-							<div class="modal-body">
-								<button class="btn btn-primary" type="button" onClick="$( '.wb-overlay' ).trigger( 'close.wb-overlay' );">Close</button>
-							</div>
-						</section>
-					</div>
-					<input class="form-control" id="scversion" name="scversion" type="text" aria-describedby="scversion">
-				</div>
-			</fieldset>
 			<input type="submit" value="Next" class="btn btn-primary" >
 		</form>
 	</div>
