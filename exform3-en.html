@@ -129,15 +129,15 @@ input[list]::-webkit-calendar-picker-indicator {
 	<div class="wb-frmvld">
 		<form action="./exform4-en.html" method="get" id="validation-example" novalidate>
 			<fieldset class="form-group">
-				<legend class="required">What is your date of birth?<strong class="required">(required)</strong></legend>
+				<legend >What is your date of birth?</legend>
 				<div class="form-inline dob-picker">
 					<div class="form-group">
-						<label for="dob2yy" class="required"><span class="field-name">Year</span> (YYYY)</label>
-						<input class="form-control" id="dob2yy" name="dob2yy" type="text" size=4 pattern="[0-9]{4}" aria-describedby="dob-desc" required="required">
+						<label for="dob2yy"><span class="field-name">Year</span> (YYYY)</label>
+						<input class="form-control" id="dob2yy" name="dob2yy" type="text" size=4 pattern="[0-9]{4}" aria-describedby="dob-desc">
 					</div>
 					<div class="form-group">
-						<label for="dob2mm" class="required"><span class="field-name">Month</span></label>
-						<select class="form-control" id="dob2mm" name="dob2mm" required="required">
+						<label for="dob2mm"><span class="field-name">Month</span></label>
+						<select class="form-control" id="dob2mm" name="dob2mm" >
 							<option label="Month"></option>
 							<option value='01'>January</option>
 							<option value='02'>February</option>
@@ -154,8 +154,8 @@ input[list]::-webkit-calendar-picker-indicator {
 						</select>
 					</div>
 					<div class="form-group">
-						<label for="dob2dd" class="required"><span class="field-name">Day</span></label>
-						<select class="form-control" id="dob2dd" name="dob2dd" required="required">
+						<label for="dob2dd" ><span class="field-name">Day</span></label>
+						<select class="form-control" id="dob2dd" name="dob2dd">
 							<option label="Day"></option>
 							<option value='01'>01</option>
 							<option value='02'>02</option>
@@ -193,7 +193,7 @@ input[list]::-webkit-calendar-picker-indicator {
 				</div>
 			</fieldset>
 			<fieldset>
-				<legend class="required"><span class="field-name">Citizenship status</span> <strong class="required">(required)</strong></legend>
+				<legend ><span class="field-name">Citizenship status</span> </legend>
 				<p><a href="#right-panel-version" aria-controls="right-panel-version" class="overlay-lnk" role="button">Help with citizenship status</a></p>
 					<section id="right-panel-version" class="wb-overlay modal-content overlay-def wb-panel-r" style="max-width:60%;">	
 						<header class="modal-header">
@@ -224,7 +224,7 @@ input[list]::-webkit-calendar-picker-indicator {
 					<label for="status4"><input type="radio" name="status" value="4" id="status4" />&#160;&#160;Other</label>
 			</fieldset>
 			<fieldset>
-			<legend class="field-name required" id="ast-dec">Which devices do you use to visit websites (check all that apply):<strong class="required">(required)</strong></legend>
+			<legend class="field-name" id="ast-dec">Which devices do you use to visit websites (check all that apply):</legend>
 				<div class="checkbox">
 					<label for="technology1"><input type="checkbox" name="phone" value="1" id="technology1" />&#160;&#160;smart phone</label>
 				</div>
@@ -244,7 +244,7 @@ input[list]::-webkit-calendar-picker-indicator {
 	</div>
 	<dl id="wb-dtmd">
 		<dt>Date modified: </dt>
-		<dd><time property="dateModified">2016-07-08</time></dd>
+		<dd><time property="dateModified">2016-09-20</time></dd>
 	</dl>
 </main>
 <footer role="contentinfo" id="wb-info">
